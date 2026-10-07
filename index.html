@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CoR Annual Impact Report 2025 — Infographie</title>
-<meta name="description" content="Infographie complète du rapport d'impact annuel 2025 du Comité européen des régions.">
+<title>CoR Annual Impact Report 2025 — Infographie / Infographic</title>
+<meta name="description" content="Infographie complète du rapport d'impact annuel 2025 du Comité européen des régions. Complete infographic of the CoR 2025 Annual Impact Report.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -36,6 +36,35 @@
   }
   .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
   h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-0.02em;line-height:1.15}
+
+  /* ===== LANG TOGGLE ===== */
+  html[lang="fr"] .en{display:none}
+  html[lang="en"] .fr{display:none}
+  html[lang="fr"] .ai-notice{display:none}
+
+  .lang-switch{
+    position:fixed;top:16px;right:16px;z-index:100;
+    display:flex;background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+    border-radius:999px;padding:4px;
+    border:1px solid var(--border);
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+  }
+  .lang-switch button{
+    border:none;background:transparent;cursor:pointer;
+    padding:6px 14px;border-radius:999px;
+    font-family:'Inter',sans-serif;font-size:12px;font-weight:600;
+    color:var(--ink-3);letter-spacing:.05em;text-transform:uppercase;
+    transition:all .2s;
+  }
+  .lang-switch button.active{background:var(--cor-blue);color:#fff}
+
+  .ai-notice{
+    background:#FEF3C7;border-bottom:1px solid #FDE68A;
+    padding:10px 24px;text-align:center;
+    font-size:13px;color:#78350F;
+  }
+  .ai-notice strong{color:#451A03}
 
   /* ===== HERO ===== */
   .hero{
@@ -226,11 +255,6 @@
   .kpi.hero-k .delta{background:rgba(255,204,0,.25);color:var(--eu-gold)}
   .kpi .delta::before{content:"▲"}
 
-  /* Mini bar in KPI */
-  .mini-bars{display:flex;gap:4px;align-items:flex-end;margin-top:16px;height:50px}
-  .mini-bars .b{flex:1;background:var(--cor-blue-light);border-radius:4px 4px 0 0}
-  .mini-bars .b.on{background:var(--cor-blue)}
-
   /* ===== TIMELINE ===== */
   .timeline{position:relative;padding-left:24px}
   .timeline::before{
@@ -380,34 +404,55 @@
   @media print{
     .hero,.outlook{break-inside:avoid}
     section{break-inside:avoid-page}
+    .lang-switch{display:none}
   }
 </style>
 </head>
 <body>
 
+<!-- ============ LANG SWITCH ============ -->
+<div class="lang-switch" role="tablist" aria-label="Language switcher">
+  <button type="button" class="active" data-lang="fr" aria-pressed="true">FR</button>
+  <button type="button" data-lang="en" aria-pressed="false">EN</button>
+</div>
+
+<!-- ============ AI NOTICE ============ -->
+<div class="ai-notice en" role="note">
+  🤖 <strong>Notice:</strong> The English version of this infographic is <strong>AI-generated</strong> from the original French draft and has not been reviewed by a human translator. For the authoritative content, please refer to the <a href="https://cor.europa.eu" style="color:#78350F;text-decoration:underline">original CoR 2025 Annual Impact Report</a>.
+</div>
+
 <!-- ============ HERO ============ -->
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">Rapport d'impact annuel · 2025</span>
-    <h1>Comité européen des régions<br><span class="ac">— 2025 en impact</span></h1>
-    <p class="lede">Vue d'ensemble des réalisations du CoR en 2025 : représenter les autorités locales et régionales dans le processus décisionnel européen, autour de trois priorités politiques — <strong style="color:#fff">cohésion, résilience, proximité</strong>.</p>
+    <span class="eyebrow">
+      <span class="fr">Rapport d'impact annuel · 2025</span>
+      <span class="en">Annual Impact Report · 2025</span>
+    </span>
+    <h1>
+      <span class="fr">Comité européen des régions<br><span class="ac">— 2025 en impact</span></span>
+      <span class="en">European Committee of the Regions<br><span class="ac">— 2025 in impact</span></span>
+    </h1>
+    <p class="lede">
+      <span class="fr">Vue d'ensemble des réalisations du CoR en 2025 : représenter les autorités locales et régionales dans le processus décisionnel européen, autour de trois priorités politiques — <strong style="color:#fff">cohésion, résilience, proximité</strong>.</span>
+      <span class="en">An overview of the CoR's 2025 achievements: representing local and regional authorities in the EU decision-making process, around three political priorities — <strong style="color:#fff">cohesion, resilience, proximity</strong>.</span>
+    </p>
 
     <div class="hero-stats">
       <div class="hs-cell">
         <div class="n">42</div>
-        <div class="l">Avis adoptés</div>
+        <div class="l"><span class="fr">Avis adoptés</span><span class="en">Opinions adopted</span></div>
       </div>
       <div class="hs-cell">
         <div class="n">7</div>
-        <div class="l">Résolutions</div>
+        <div class="l"><span class="fr">Résolutions</span><span class="en">Resolutions</span></div>
       </div>
       <div class="hs-cell">
         <div class="n">3</div>
-        <div class="l">Priorités politiques</div>
+        <div class="l"><span class="fr">Priorités politiques</span><span class="en">Political priorities</span></div>
       </div>
       <div class="hs-cell">
         <div class="n">19</div>
-        <div class="l">Renvois MFF (2026)</div>
+        <div class="l"><span class="fr">Renvois MFF (2026)</span><span class="en">MFF referrals (2026)</span></div>
       </div>
     </div>
   </div>
@@ -417,54 +462,111 @@
 <section>
   <div class="wrap">
     <div class="section-head">
-      <span class="section-tag">Mandat 2025–2030</span>
-      <h2>Trois priorités, un cap</h2>
-      <p>Pour son 8ème mandat, le CoR s'est doté de trois priorités structurantes. Chacune a produit des impacts tangibles sur la législation et les stratégies européennes en 2025.</p>
+      <span class="section-tag"><span class="fr">Mandat 2025-2030</span><span class="en">2025-2030 term of office</span></span>
+      <h2><span class="fr">Trois priorités, un cap</span><span class="en">Three priorities, one direction</span></h2>
+      <p>
+        <span class="fr">Pour son 8ème mandat, le CoR s'est doté de trois priorités structurantes. Chacune a produit des impacts tangibles sur la législation et les stratégies européennes en 2025.</span>
+        <span class="en">For its 8th term, the CoR adopted three structuring priorities. Each one has produced tangible impacts on EU legislation and strategies in 2025.</span>
+      </p>
     </div>
 
     <div class="priorities">
       <!-- COHESION -->
       <div class="pri cohesion">
         <div class="pri-num">01</div>
-        <div class="sub">Priorité</div>
-        <h3>Cohésion</h3>
+        <div class="sub"><span class="fr">Priorité</span><span class="en">Priority</span></div>
+        <h3><span class="fr">Cohésion</span><span class="en">Cohesion</span></h3>
         <ul>
-          <li><strong>Conclusions Council (28 mars 2025)</strong> — reprise des messages clés du CoR sur l'implication des LRA dans la future politique de cohésion.</li>
-          <li><strong>Cadre Financier Pluriannuel post-2027</strong> — pression politique via l'Alliance de Cohésion, lettre des quatre groupes politiques du PE à la présidente von der Leyen.</li>
-          <li><strong>Housing</strong> — messages intégrés dans les conclusions EPSCO (1er déc.), la résolution du PE et le comité HOUS.</li>
-          <li><strong>Interreg post-2027</strong> — valeur ajoutée reconnue par le Conseil et proposition législative dédiée.</li>
-          <li><strong>FP10 / Horizon Europe</strong> — enveloppe proposée à <strong>175,3 Mds €</strong>, éléments CoR intégrés dans les propositions législatives du 16 juillet 2025.</li>
-          <li><strong>New European Bauhaus Boost</strong> — proposition CoR devenue action EU concrète pour les petites communes.</li>
+          <li>
+            <span class="fr"><strong>Conclusions Council (28 mars 2025)</strong> — reprise des messages clés du CoR sur l'implication des LRA dans la future politique de cohésion.</span>
+            <span class="en"><strong>Council conclusions (28 March 2025)</strong> — key CoR messages on LRA involvement in future cohesion policy taken up.</span>
+          </li>
+          <li>
+            <span class="fr"><strong>Cadre Financier Pluriannuel post-2027</strong> — pression politique via l'Alliance de Cohésion, lettre des quatre groupes politiques du PE à la présidente von der Leyen.</span>
+            <span class="en"><strong>Post-2027 Multiannual Financial Framework</strong> — political pressure via the Cohesion Alliance, joint letter from four EP political groups to President von der Leyen.</span>
+          </li>
+          <li>
+            <span class="fr"><strong>Housing</strong> — messages intégrés dans les conclusions EPSCO (1er déc.), la résolution du PE et le comité HOUS.</span>
+            <span class="en"><strong>Housing</strong> — messages incorporated into EPSCO conclusions (1 Dec), EP resolution and HOUS committee draft report.</span>
+          </li>
+          <li>
+            <span class="fr"><strong>Interreg post-2027</strong> — valeur ajoutée reconnue par le Conseil et proposition législative dédiée.</span>
+            <span class="en"><strong>Interreg post-2027</strong> — EU added value recognised by the Council and a dedicated legislative proposal.</span>
+          </li>
+          <li>
+            <span class="fr"><strong>FP10 / Horizon Europe</strong> — enveloppe proposée à <strong>175,3 Mds €</strong>, éléments CoR intégrés dans les propositions législatives du 16 juillet 2025.</span>
+            <span class="en"><strong>FP10 / Horizon Europe</strong> — proposed envelope of <strong>€175.3 bn</strong>, CoR elements reflected in the 16 July 2025 legislative proposals.</span>
+          </li>
+          <li>
+            <span class="fr"><strong>New European Bauhaus Boost</strong> — proposition CoR devenue action EU concrète pour les petites communes.</span>
+            <span class="en"><strong>New European Bauhaus Boost</strong> — CoR proposal turned into concrete EU action supporting small municipalities.</span>
+          </li>
         </ul>
       </div>
 
       <!-- RESILIENCE -->
       <div class="pri resilience">
         <div class="pri-num">02</div>
-        <div class="sub">Priorité</div>
-        <h3>Résilience</h3>
+        <div class="sub"><span class="fr">Priorité</span><span class="en">Priority</span></div>
+        <h3><span class="fr">Résilience</span><span class="en">Resilience</span></h3>
         <ul>
-          <li><strong>Pacte européen pour l'océan</strong> — contribution « essentielle » selon la Commission, <strong>11 propositions</strong> du CoR reprises dans la communication.</li>
-          <li><strong>COP30 / Climat global</strong> — reconnaissance des LRA dans les conclusions du Conseil et la résolution PE, 1er Pre-COP subnational européen convoqué par le CoR.</li>
-          <li><strong>Ocean Rise & Coastal Resilience Coalition</strong> — plus de <strong>1 000 villes et régions</strong>, représentant 1 milliard de personnes.</li>
-          <li><strong>Water Resilience Forum</strong> — 1ère édition organisée au CoR le 8 déc. avec la Commission, l'EESC et le JRC.</li>
-          <li><strong>Automotive Regions Alliance</strong> — Déclaration de Munich (sept. 2025) sur la transition de l'automobile vers 2035.</li>
-          <li><strong>Ukraine</strong> — TIPS4UA : 44 responsables ukrainiens formés, 400+ représentants LRA invités à l'URC2025 à Rome.</li>
+          <li>
+            <span class="fr"><strong>Pacte européen pour l'océan</strong> — contribution « essentielle » selon la Commission, <strong>11 propositions</strong> du CoR reprises dans la communication.</span>
+            <span class="en"><strong>European Ocean Pact</strong> — classified as 'essential' by the Commission, <strong>11 CoR proposals</strong> reflected in the final communication.</span>
+          </li>
+          <li>
+            <span class="fr"><strong>COP30 / Climat global</strong> — reconnaissance des LRA dans les conclusions du Conseil et la résolution PE, 1er Pre-COP subnational européen convoqué par le CoR.</span>
+            <span class="en"><strong>COP30 / Global climate</strong> — LRA role recognised in Council conclusions and EP resolution; first European Subnational Pre-COP convened by the CoR.</span>
+          </li>
+          <li>
+            <span class="fr"><strong>Ocean Rise & Coastal Resilience Coalition</strong> — plus de <strong>1 000 villes et régions</strong>, représentant 1 milliard de personnes.</span>
+            <span class="en"><strong>Ocean Rise & Coastal Resilience Coalition</strong> — over <strong>1,000 cities and regions</strong>, representing one billion people.</span>
+          </li>
+          <li>
+            <span class="fr"><strong>Water Resilience Forum</strong> — 1ère édition organisée au CoR le 8 déc. avec la Commission, l'EESC et le JRC.</span>
+            <span class="en"><strong>Water Resilience Forum</strong> — first edition hosted at the CoR on 8 Dec with the Commission, EESC and JRC.</span>
+          </li>
+          <li>
+            <span class="fr"><strong>Automotive Regions Alliance</strong> — Déclaration de Munich (sept. 2025) sur la transition de l'automobile vers 2035.</span>
+            <span class="en"><strong>Automotive Regions Alliance</strong> — Munich Declaration (Sept 2025) on the automotive sector's transition towards 2035.</span>
+          </li>
+          <li>
+            <span class="fr"><strong>Ukraine</strong> — TIPS4UA : 44 responsables ukrainiens formés, 400+ représentants LRA invités à l'URC2025 à Rome.</span>
+            <span class="en"><strong>Ukraine</strong> — TIPS4UA: 44 Ukrainian officials trained; 400+ LRA representatives invited to URC2025 in Rome.</span>
+          </li>
         </ul>
       </div>
 
       <!-- PROXIMITY -->
       <div class="pri proximity">
         <div class="pri-num">03</div>
-        <div class="sub">Priorité</div>
-        <h3>Proximité</h3>
+        <div class="sub"><span class="fr">Priorité</span><span class="en">Priority</span></div>
+        <h3><span class="fr">Proximité</span><span class="en">Proximity</span></h3>
         <ul>
-          <li><strong>EU Local Councillors Network</strong> — <strong>3 000+ élus locaux</strong>, 1 700 autorités engagées, 1 200 initiatives de communication, 350 councillors en visite à Bruxelles.</li>
-          <li><strong>Young Elected Politicians</strong> — 150 nouveaux YEPs recrutés, 881 actifs, 78 participants aux événements CoR.</li>
-          <li><strong>Rule of Law</strong> — opinion présentée au PE, EESC, Commission et experts via CEPS.</li>
-          <li><strong>Mayor Paweł Adamowicz Award</strong> — lauréat Vitaliy Klitschko, maire de Kyiv ; couverture média dans 15 pays.</li>
-          <li><strong>EuroPCom 2025</strong> — <strong>2 150 participants</strong>, 40 intervenants, pionnier dans l'usage de l'IA.</li>
-          <li><strong>Élections européennes 2024</strong> — impact reconnu dans le rapport PE de stocktaking (sept. 2025).</li>
+          <li>
+            <span class="fr"><strong>EU Local Councillors Network</strong> — <strong>3 000+ élus locaux</strong>, 1 700 autorités engagées, 1 200 initiatives de communication, 350 councillors en visite à Bruxelles.</span>
+            <span class="en"><strong>EU Local Councillors Network</strong> — <strong>3,000+ local elected officials</strong>, 1,700 authorities engaged, 1,200 communication initiatives, 350 councillors on study visits to Brussels.</span>
+          </li>
+          <li>
+            <span class="fr"><strong>Young Elected Politicians</strong> — 150 nouveaux YEPs recrutés, 881 actifs, 78 participants aux événements CoR.</span>
+            <span class="en"><strong>Young Elected Politicians</strong> — 150 new YEPs recruited, 881 active, 78 participants in CoR events.</span>
+          </li>
+          <li>
+            <span class="fr"><strong>Rule of Law</strong> — opinion présentée au PE, EESC, Commission et experts via CEPS.</span>
+            <span class="en"><strong>Rule of Law</strong> — opinion presented at EP, EESC, Commission and expert forums via CEPS.</span>
+          </li>
+          <li>
+            <span class="fr"><strong>Mayor Paweł Adamowicz Award</strong> — lauréat Vitaliy Klitschko, maire de Kyiv ; couverture média dans 15 pays.</span>
+            <span class="en"><strong>Mayor Paweł Adamowicz Award</strong> — laureate: Vitaliy Klitschko, Mayor of Kyiv; media coverage in 15 countries.</span>
+          </li>
+          <li>
+            <span class="fr"><strong>EuroPCom 2025</strong> — <strong>2 150 participants</strong>, 40 intervenants, pionnier dans l'usage de l'IA.</span>
+            <span class="en"><strong>EuroPCom 2025</strong> — <strong>2,150 participants</strong>, 40 speakers, pioneering embrace of AI-driven tech.</span>
+          </li>
+          <li>
+            <span class="fr"><strong>Élections européennes 2024</strong> — impact reconnu dans le rapport PE de stocktaking (sept. 2025).</span>
+            <span class="en"><strong>2024 European elections</strong> — impact recognised in the EP stocktaking report (Sept 2025).</span>
+          </li>
         </ul>
       </div>
     </div>
@@ -475,103 +577,104 @@
 <section class="alt-bg">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-tag">Communication</span>
-      <h2>Une année record pour la visibilité du CoR</h2>
-      <p>En 2025, les trois canaux stratégiques — presse, réseaux sociaux et web/streaming — ont atteint des niveaux inédits, portés par une approche plus stratégique et par les grands temps forts (EU Regions Week, EuroPCom, COP30).</p>
+      <span class="section-tag"><span class="fr">Communication</span><span class="en">Communication</span></span>
+      <h2><span class="fr">Une année record pour la visibilité du CoR</span><span class="en">A record year for CoR visibility</span></h2>
+      <p>
+        <span class="fr">En 2025, les trois canaux stratégiques — presse, réseaux sociaux et web/streaming — ont atteint des niveaux inédits, portés par une approche plus stratégique et par les grands temps forts (EU Regions Week, EuroPCom, COP30).</span>
+        <span class="en">In 2025, the three strategic channels — press, social media and web/streaming — hit unprecedented levels, driven by a more strategic approach and by major milestones (EU Regions Week, EuroPCom, COP30).</span>
+      </p>
     </div>
 
     <div class="kpi-grid">
-      <!-- Hero KPI: Media -->
       <div class="kpi hero-k">
-        <div class="cat">Mentions médias</div>
+        <div class="cat"><span class="fr">Mentions médias</span><span class="en">Media mentions</span></div>
         <div class="big-num">28 281</div>
-        <div class="label">Mentions médias en 2025 — plus haut niveau jamais mesuré</div>
-        <div class="delta">+60 % vs 2024</div>
+        <div class="label"><span class="fr">Mentions médias en 2025 — plus haut niveau jamais mesuré</span><span class="en">Media mentions in 2025 — highest level ever measured</span></div>
+        <div class="delta"><span class="fr">+60 % vs 2024</span><span class="en">+60% vs 2024</span></div>
       </div>
 
-      <!-- Hero KPI: Social followers -->
       <div class="kpi hero-k">
-        <div class="cat">Followers réseaux sociaux</div>
+        <div class="cat"><span class="fr">Followers réseaux sociaux</span><span class="en">Social media followers</span></div>
         <div class="big-num">261 307</div>
-        <div class="label">Followers cumulés en fin d'année (vs 220 233 début 2025)</div>
+        <div class="label"><span class="fr">Followers cumulés en fin d'année (vs 220 233 début 2025)</span><span class="en">Cumulative followers at year-end (vs 220,233 at start of 2025)</span></div>
         <div class="delta">+18,5 %</div>
       </div>
 
-      <!-- Web page views -->
       <div class="kpi med">
-        <div class="cat">Site web</div>
+        <div class="cat"><span class="fr">Site web</span><span class="en">Website</span></div>
         <div class="big-num">2,4 M</div>
-        <div class="label">Pages vues sur cor.europa.eu</div>
-        <div class="delta">+41 % vs 2024</div>
+        <div class="label"><span class="fr">Pages vues sur cor.europa.eu</span><span class="en">Page views on cor.europa.eu</span></div>
+        <div class="delta"><span class="fr">+41 % vs 2024</span><span class="en">+41% vs 2024</span></div>
       </div>
 
-      <!-- Streaming -->
       <div class="kpi med">
         <div class="cat">Streaming</div>
         <div class="big-num">178 K</div>
-        <div class="label">Vues live & VOD sur 282 réunions streamées</div>
-        <div class="delta">× 3 vs 2024 (55 000)</div>
+        <div class="label"><span class="fr">Vues live & VOD sur 282 réunions streamées</span><span class="en">Live & VOD views across 282 streamed meetings</span></div>
+        <div class="delta"><span class="fr">× 3 vs 2024 (55 000)</span><span class="en">× 3 vs 2024 (55,000)</span></div>
       </div>
 
-      <!-- Social engagement -->
       <div class="kpi med">
-        <div class="cat">Vues organiques</div>
+        <div class="cat"><span class="fr">Vues organiques</span><span class="en">Organic views</span></div>
         <div class="big-num">1,21 M</div>
-        <div class="label">Vues organiques — reels et collaborations</div>
-        <div class="delta">× 2 vs année précédente</div>
+        <div class="label"><span class="fr">Vues organiques — reels et collaborations</span><span class="en">Organic views — reels and collaborations</span></div>
+        <div class="delta"><span class="fr">× 2 vs année précédente</span><span class="en">× 2 vs previous year</span></div>
       </div>
     </div>
 
     <div style="margin-top:40px" class="comm-dash">
       <div class="comm-chart">
-        <div class="chart-title">Évolution des mentions médias — S1 vs S2</div>
+        <div class="chart-title"><span class="fr">Évolution des mentions médias — S1 vs S2</span><span class="en">Media mentions evolution — H1 vs H2</span></div>
         <div class="chart-row">
-          <div class="chart-label">S1 2024</div>
+          <div class="chart-label"><span class="fr">S1 2024</span><span class="en">H1 2024</span></div>
           <div class="chart-bar-wrap"><div class="chart-bar" style="background:#94A3B8;width:46%">8 800</div></div>
           <div class="chart-value">8 800</div>
         </div>
         <div class="chart-row">
-          <div class="chart-label">S2 2024</div>
+          <div class="chart-label"><span class="fr">S2 2024</span><span class="en">H2 2024</span></div>
           <div class="chart-bar-wrap"><div class="chart-bar" style="background:#64748B;width:47%">8 800</div></div>
           <div class="chart-value">8 800</div>
         </div>
         <div class="chart-row">
-          <div class="chart-label">S1 2025</div>
+          <div class="chart-label"><span class="fr">S1 2025</span><span class="en">H1 2025</span></div>
           <div class="chart-bar-wrap"><div class="chart-bar" style="background:var(--cor-blue);width:80%">15 202</div></div>
-          <div class="chart-value">15 202<small>record</small></div>
+          <div class="chart-value">15 202<small><span class="fr">record</span><span class="en">record</span></small></div>
         </div>
         <div class="chart-row">
-          <div class="chart-label">S2 2025</div>
+          <div class="chart-label"><span class="fr">S2 2025</span><span class="en">H2 2025</span></div>
           <div class="chart-bar-wrap"><div class="chart-bar" style="background:var(--eu-gold);color:#082659;width:69%">13 079</div></div>
           <div class="chart-value">13 079</div>
         </div>
-        <p style="margin-top:20px;font-size:13px;color:var(--ink-3);border-top:1px dashed var(--border);padding-top:16px">Record historique sur un semestre et sur l'année entière, confirmant un renforcement net de la stratégie média.</p>
+        <p style="margin-top:20px;font-size:13px;color:var(--ink-3);border-top:1px dashed var(--border);padding-top:16px">
+          <span class="fr">Record historique sur un semestre et sur l'année entière, confirmant un renforcement net de la stratégie média.</span>
+          <span class="en">All-time record for both a half-year and the full year, confirming a marked strengthening of the media strategy.</span>
+        </p>
       </div>
 
       <div class="comm-side">
         <div class="mini-k">
           <div class="n">2 314</div>
-          <div class="l">Posts publiés</div>
+          <div class="l"><span class="fr">Posts publiés</span><span class="en">Posts published</span></div>
         </div>
         <div class="mini-k">
           <div class="n">83 178</div>
-          <div class="l">Engagements organiques</div>
+          <div class="l"><span class="fr">Engagements organiques</span><span class="en">Organic engagements</span></div>
         </div>
         <div class="mini-k">
           <div class="n">85 %</div>
-          <div class="l">Membres actifs sur plusieurs plateformes</div>
+          <div class="l"><span class="fr">Membres actifs sur plusieurs plateformes</span><span class="en">Members active on multiple platforms</span></div>
         </div>
         <div class="mini-k">
           <div class="n">10</div>
-          <div class="l">Langues des campagnes multilingues</div>
+          <div class="l"><span class="fr">Langues des campagnes multilingues</span><span class="en">Languages for multilingual campaigns</span></div>
         </div>
         <div class="mini-k">
           <div class="n">51-57 %</div>
-          <div class="l">Taux d'ouverture emailings</div>
+          <div class="l"><span class="fr">Taux d'ouverture emailings</span><span class="en">Email open rates</span></div>
         </div>
         <div class="mini-k">
           <div class="n">45 K</div>
-          <div class="l">Vues live streams & vidéos à la demande</div>
+          <div class="l"><span class="fr">Vues live streams & vidéos à la demande</span><span class="en">Live stream & on-demand video views</span></div>
         </div>
       </div>
     </div>
@@ -582,61 +685,64 @@
 <section>
   <div class="wrap">
     <div class="section-head">
-      <span class="section-tag">Chronologie 2025</span>
-      <h2>Les temps forts de l'année</h2>
-      <p>Douze mois rythmés par des étapes législatives, des alliances renforcées et des rendez-vous à fort retentissement politique et médiatique.</p>
+      <span class="section-tag"><span class="fr">Chronologie 2025</span><span class="en">2025 timeline</span></span>
+      <h2><span class="fr">Les temps forts de l'année</span><span class="en">Key moments of the year</span></h2>
+      <p>
+        <span class="fr">Douze mois rythmés par des étapes législatives, des alliances renforcées et des rendez-vous à fort retentissement politique et médiatique.</span>
+        <span class="en">Twelve months paced by legislative milestones, strengthened alliances and events with major political and media resonance.</span>
+      </p>
     </div>
 
     <div class="timeline">
       <div class="tl-item">
-        <div class="tl-date">28 mars</div>
-        <h4>Conclusions du Conseil sur la politique de cohésion</h4>
-        <p>Reprise des messages clés du CoR sur l'implication active des LRA dans la future politique de cohésion.</p>
+        <div class="tl-date"><span class="fr">28 mars</span><span class="en">28 March</span></div>
+        <h4><span class="fr">Conclusions du Conseil sur la politique de cohésion</span><span class="en">Council conclusions on cohesion policy</span></h4>
+        <p><span class="fr">Reprise des messages clés du CoR sur l'implication active des LRA dans la future politique de cohésion.</span><span class="en">Key CoR messages on active LRA involvement in future cohesion policy taken up.</span></p>
       </div>
       <div class="tl-item m">
-        <div class="tl-date">14-15 mai</div>
-        <h4>Session plénière + Conférence Budget UE</h4>
-        <p>Adoption de la résolution sur le prochain MFF. Rapporteure Maupertuis invitée à la Annual EU Budget Conference.</p>
+        <div class="tl-date"><span class="fr">14-15 mai</span><span class="en">14-15 May</span></div>
+        <h4><span class="fr">Session plénière + Conférence Budget UE</span><span class="en">Plenary session + EU Budget Conference</span></h4>
+        <p><span class="fr">Adoption de la résolution sur le prochain MFF. Rapporteure Maupertuis invitée à la Annual EU Budget Conference.</span><span class="en">Adoption of the resolution on the next MFF. Rapporteur Maupertuis invited to the Annual EU Budget Conference.</span></p>
       </div>
       <div class="tl-item r">
-        <div class="tl-date">9-13 juin</div>
-        <h4>UNOC3 à Nice</h4>
-        <p>Le CoR dans la délégation EU officielle. Lancement de la Coalition Ocean Rise & Coastal Resilience (1 000+ villes/régions).</p>
+        <div class="tl-date"><span class="fr">9-13 juin</span><span class="en">9-13 June</span></div>
+        <h4><span class="fr">UNOC3 à Nice</span><span class="en">UNOC3 in Nice</span></h4>
+        <p><span class="fr">Le CoR dans la délégation EU officielle. Lancement de la Coalition Ocean Rise & Coastal Resilience (1 000+ villes/régions).</span><span class="en">The CoR as part of the official EU delegation. Launch of the Ocean Rise & Coastal Resilience Coalition (1,000+ cities/regions).</span></p>
       </div>
       <div class="tl-item m">
-        <div class="tl-date">3-4 juillet</div>
-        <h4>EuroPCom 2025 — « Beyond words »</h4>
-        <p>2 150 participants, 40 intervenants, intégration pionnière d'outils IA pour la com publique.</p>
+        <div class="tl-date"><span class="fr">3-4 juillet</span><span class="en">3-4 July</span></div>
+        <h4><span class="fr">EuroPCom 2025 — « Beyond words »</span><span class="en">EuroPCom 2025 — 'Beyond words'</span></h4>
+        <p><span class="fr">2 150 participants, 40 intervenants, intégration pionnière d'outils IA pour la com publique.</span><span class="en">2,150 participants, 40 speakers, pioneering integration of AI tools for public communication.</span></p>
       </div>
       <div class="tl-item">
-        <div class="tl-date">10-11 juillet</div>
-        <h4>Ukraine Recovery Conference, Rome</h4>
-        <p>400+ représentants LRA invités, lancement de l'European Partnership Hub, 15 jumelages signés en marge.</p>
+        <div class="tl-date"><span class="fr">10-11 juillet</span><span class="en">10-11 July</span></div>
+        <h4><span class="fr">Ukraine Recovery Conference, Rome</span><span class="en">Ukraine Recovery Conference, Rome</span></h4>
+        <p><span class="fr">400+ représentants LRA invités, lancement de l'European Partnership Hub, 15 jumelages signés en marge.</span><span class="en">400+ LRA representatives invited, launch of the European Partnership Hub, 15 twinning agreements signed on the sidelines.</span></p>
       </div>
       <div class="tl-item">
-        <div class="tl-date">16 juillet</div>
-        <h4>Proposition de la Commission sur le MFF 2028-2034</h4>
-        <p>Partiellement alignée sur les messages CoR, catalysant 19 renvois pour 2026 et une mobilisation politique majeure.</p>
+        <div class="tl-date"><span class="fr">16 juillet</span><span class="en">16 July</span></div>
+        <h4><span class="fr">Proposition de la Commission sur le MFF 2028-2034</span><span class="en">Commission proposal on the 2028-2034 MFF</span></h4>
+        <p><span class="fr">Partiellement alignée sur les messages CoR, catalysant 19 renvois pour 2026 et une mobilisation politique majeure.</span><span class="en">Partially aligned with CoR messages, triggering 19 referrals for 2026 and major political mobilisation.</span></p>
       </div>
       <div class="tl-item r">
-        <div class="tl-date">13-16 octobre</div>
-        <h4>23e European Week of Regions and Cities</h4>
-        <p>6 500 participants, 80 pays, 143 sessions. Manifestation devant le PE pour défendre la politique de cohésion.</p>
+        <div class="tl-date"><span class="fr">13-16 octobre</span><span class="en">13-16 October</span></div>
+        <h4><span class="fr">23e European Week of Regions and Cities</span><span class="en">23rd European Week of Regions and Cities</span></h4>
+        <p><span class="fr">6 500 participants, 80 pays, 143 sessions. Manifestation devant le PE pour défendre la politique de cohésion.</span><span class="en">6,500 participants, 80 countries, 143 sessions. Demonstration outside the EP to defend cohesion policy.</span></p>
       </div>
       <div class="tl-item m">
-        <div class="tl-date">Novembre</div>
-        <h4>COP30 — Belém + Local Leaders Forum, Rio</h4>
-        <p>Participation de la présidente du CoR. Endossement UE de la Coalition CHAMP pour une gouvernance multiniveau.</p>
+        <div class="tl-date"><span class="fr">Novembre</span><span class="en">November</span></div>
+        <h4><span class="fr">COP30 — Belém + Local Leaders Forum, Rio</span><span class="en">COP30 — Belém + Local Leaders Forum, Rio</span></h4>
+        <p><span class="fr">Participation de la présidente du CoR. Endossement UE de la Coalition CHAMP pour une gouvernance multiniveau.</span><span class="en">Participation of the CoR president. EU endorsement of the CHAMP Coalition for multilevel governance.</span></p>
       </div>
       <div class="tl-item r">
-        <div class="tl-date">1er décembre</div>
-        <h4>Conclusions EPSCO Housing</h4>
-        <p>Messages clés du CoR sur le logement abordable intégrés dans les conclusions.</p>
+        <div class="tl-date"><span class="fr">1er décembre</span><span class="en">1 December</span></div>
+        <h4><span class="fr">Conclusions EPSCO Housing</span><span class="en">EPSCO Housing conclusions</span></h4>
+        <p><span class="fr">Messages clés du CoR sur le logement abordable intégrés dans les conclusions.</span><span class="en">Key CoR messages on affordable housing integrated into the conclusions.</span></p>
       </div>
       <div class="tl-item">
-        <div class="tl-date">8 décembre</div>
-        <h4>1er European Water Resilience Forum</h4>
-        <p>Co-organisé au CoR avec la Commission, l'EESC et le JRC. Présence des commissaires Ribera et Roswall.</p>
+        <div class="tl-date"><span class="fr">8 décembre</span><span class="en">8 December</span></div>
+        <h4><span class="fr">1er European Water Resilience Forum</span><span class="en">First European Water Resilience Forum</span></h4>
+        <p><span class="fr">Co-organisé au CoR avec la Commission, l'EESC et le JRC. Présence des commissaires Ribera et Roswall.</span><span class="en">Co-organised at the CoR with the Commission, the EESC and the JRC. Commissioners Ribera and Roswall attending.</span></p>
       </div>
     </div>
   </div>
@@ -646,22 +752,31 @@
 <section class="alt-bg">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-tag">Réseaux & alliances</span>
-      <h2>Un écosystème qui démultiplie l'impact</h2>
-      <p>Les réseaux structurés et les alliances thématiques permettent au CoR de porter la voix des régions et des villes bien au-delà de ses propres avis.</p>
+      <span class="section-tag"><span class="fr">Réseaux & alliances</span><span class="en">Networks & alliances</span></span>
+      <h2><span class="fr">Un écosystème qui démultiplie l'impact</span><span class="en">An ecosystem that multiplies impact</span></h2>
+      <p>
+        <span class="fr">Les réseaux structurés et les alliances thématiques permettent au CoR de porter la voix des régions et des villes bien au-delà de ses propres avis.</span>
+        <span class="en">Structured networks and thematic alliances allow the CoR to carry the voice of regions and cities far beyond its own opinions.</span>
+      </p>
     </div>
 
     <div class="network-grid">
       <div class="net-card">
         <div class="ico">★</div>
         <h3>EU Local Councillors Network</h3>
-        <p>Initiative EU conjointement gérée avec la Commission, pierre angulaire de la démocratie participative.</p>
+        <p>
+          <span class="fr">Initiative EU conjointement gérée avec la Commission, pierre angulaire de la démocratie participative.</span>
+          <span class="en">EU initiative jointly managed with the Commission, cornerstone of participatory democracy.</span>
+        </p>
         <div class="n">3 000+</div>
-        <p style="margin-top:-6px;font-size:13px;color:var(--ink-3)">Élus locaux et régionaux dans les 27 États membres</p>
+        <p style="margin-top:-6px;font-size:13px;color:var(--ink-3)">
+          <span class="fr">Élus locaux et régionaux dans les 27 États membres</span>
+          <span class="en">Local and regional elected officials across all 27 Member States</span>
+        </p>
         <div class="net-stats">
-          <div class="net-stat"><strong>1 700</strong>Autorités engagées</div>
-          <div class="net-stat"><strong>350</strong>Visites à Bruxelles</div>
-          <div class="net-stat"><strong>12</strong>Webinaires thématiques</div>
+          <div class="net-stat"><strong>1 700</strong><span class="fr">Autorités engagées</span><span class="en">Authorities engaged</span></div>
+          <div class="net-stat"><strong>350</strong><span class="fr">Visites à Bruxelles</span><span class="en">Study visits to Brussels</span></div>
+          <div class="net-stat"><strong>12</strong><span class="fr">Webinaires thématiques</span><span class="en">Thematic webinars</span></div>
           <div class="net-stat"><strong>18,7 %</strong>Click-to-open rate</div>
         </div>
       </div>
@@ -669,27 +784,39 @@
       <div class="net-card">
         <div class="ico">◆</div>
         <h3>Young Elected Politicians</h3>
-        <p>Programme phare pour impliquer les jeunes élus comme ambassadeurs du CoR et de l'UE.</p>
+        <p>
+          <span class="fr">Programme phare pour impliquer les jeunes élus comme ambassadeurs du CoR et de l'UE.</span>
+          <span class="en">Flagship programme engaging young elected officials as ambassadors of the CoR and the EU.</span>
+        </p>
         <div class="n">881</div>
-        <p style="margin-top:-6px;font-size:13px;color:var(--ink-3)">YEPs actifs — 150 nouveaux en 2025</p>
+        <p style="margin-top:-6px;font-size:13px;color:var(--ink-3)">
+          <span class="fr">YEPs actifs — 150 nouveaux en 2025</span>
+          <span class="en">Active YEPs — 150 new in 2025</span>
+        </p>
         <div class="net-stats">
-          <div class="net-stat"><strong>1 141</strong>Enrôlés depuis 2019</div>
-          <div class="net-stat"><strong>90 %</strong>Taux de présence EURW</div>
-          <div class="net-stat"><strong>66 %</strong>Taux d'ouverture newsletter</div>
-          <div class="net-stat"><strong>104</strong>Participants EURegionsWeek</div>
+          <div class="net-stat"><strong>1 141</strong><span class="fr">Enrôlés depuis 2019</span><span class="en">Enrolled since 2019</span></div>
+          <div class="net-stat"><strong>90 %</strong><span class="fr">Taux de présence EURW</span><span class="en">EURW attendance rate</span></div>
+          <div class="net-stat"><strong>66 %</strong><span class="fr">Taux d'ouverture newsletter</span><span class="en">Newsletter open rate</span></div>
+          <div class="net-stat"><strong>104</strong><span class="fr">Participants EURegionsWeek</span><span class="en">EURegionsWeek attendees</span></div>
         </div>
       </div>
 
       <div class="net-card">
         <div class="ico">⬢</div>
-        <h3>Alliances thématiques</h3>
-        <p>Trois alliances mobilisées en 2025, chacune avec un impact politique mesurable.</p>
+        <h3><span class="fr">Alliances thématiques</span><span class="en">Thematic alliances</span></h3>
+        <p>
+          <span class="fr">Trois alliances mobilisées en 2025, chacune avec un impact politique mesurable.</span>
+          <span class="en">Three alliances mobilised in 2025, each with measurable political impact.</span>
+        </p>
         <div class="n">3</div>
-        <p style="margin-top:-6px;font-size:13px;color:var(--ink-3)">Cohésion · Automobile · Reconstruction Ukraine</p>
+        <p style="margin-top:-6px;font-size:13px;color:var(--ink-3)">
+          <span class="fr">Cohésion · Automobile · Reconstruction Ukraine</span>
+          <span class="en">Cohesion · Automotive · Ukraine reconstruction</span>
+        </p>
         <div class="net-stats">
-          <div class="net-stat"><strong>Cohesion Alliance</strong>Manifestation + lettre PE sur le MFF</div>
-          <div class="net-stat"><strong>ARA</strong>Déclaration de Munich (sept. 2025)</div>
-          <div class="net-stat"><strong>Alliance Ukraine</strong>TIPS4UA, Partnership Hub</div>
+          <div class="net-stat"><strong>Cohesion Alliance</strong><span class="fr">Manifestation + lettre PE sur le MFF</span><span class="en">Demonstration + EP letter on the MFF</span></div>
+          <div class="net-stat"><strong>ARA</strong><span class="fr">Déclaration de Munich (sept. 2025)</span><span class="en">Munich Declaration (Sept 2025)</span></div>
+          <div class="net-stat"><strong><span class="fr">Alliance Ukraine</span><span class="en">Ukraine Alliance</span></strong><span class="fr">TIPS4UA, Partnership Hub</span><span class="en">TIPS4UA, Partnership Hub</span></div>
         </div>
       </div>
     </div>
@@ -700,42 +827,51 @@
 <section>
   <div class="wrap">
     <div class="section-head">
-      <span class="section-tag">Évènement phare</span>
-      <h2>EU Regions Week 2025 — l'édition de tous les records</h2>
-      <p>23e édition. Un rendez-vous central pour défendre la politique de cohésion et donner de la voix aux régions et aux villes.</p>
+      <span class="section-tag"><span class="fr">Évènement phare</span><span class="en">Flagship event</span></span>
+      <h2><span class="fr">EU Regions Week 2025 — l'édition de tous les records</span><span class="en">EU Regions Week 2025 — the record-breaking edition</span></h2>
+      <p>
+        <span class="fr">23e édition. Un rendez-vous central pour défendre la politique de cohésion et donner de la voix aux régions et aux villes.</span>
+        <span class="en">23rd edition. A central platform to defend cohesion policy and give voice to regions and cities.</span>
+      </p>
     </div>
 
     <div class="kpi-grid">
       <div class="kpi sml">
-        <div class="cat">Participation</div>
+        <div class="cat"><span class="fr">Participation</span><span class="en">Attendance</span></div>
         <div class="big-num">6 500</div>
-        <div class="label">Participants dont 3 200 sur site</div>
-        <div class="delta">+28 % vs 2024</div>
+        <div class="label"><span class="fr">Participants dont 3 200 sur site</span><span class="en">Participants, including 3,200 onsite</span></div>
+        <div class="delta"><span class="fr">+28 % vs 2024</span><span class="en">+28% vs 2024</span></div>
       </div>
       <div class="kpi sml">
         <div class="cat">Reach</div>
         <div class="big-num">80</div>
-        <div class="label">Pays représentés</div>
+        <div class="label"><span class="fr">Pays représentés</span><span class="en">Countries represented</span></div>
       </div>
       <div class="kpi sml">
-        <div class="cat">Programme</div>
+        <div class="cat"><span class="fr">Programme</span><span class="en">Programme</span></div>
         <div class="big-num">143</div>
-        <div class="label">Sessions au programme</div>
+        <div class="label"><span class="fr">Sessions au programme</span><span class="en">Sessions on the programme</span></div>
       </div>
       <div class="kpi sml">
-        <div class="cat">Médias</div>
+        <div class="cat"><span class="fr">Médias</span><span class="en">Media</span></div>
         <div class="big-num">140</div>
-        <div class="label">Journalistes invités</div>
+        <div class="label"><span class="fr">Journalistes invités</span><span class="en">Journalists invited</span></div>
       </div>
       <div class="kpi big">
-        <div class="cat">Discours « State of Regions and Cities »</div>
+        <div class="cat"><span class="fr">Discours « State of Regions and Cities »</span><span class="en">'State of Regions and Cities' address</span></div>
         <div class="big-num">57 000</div>
-        <div class="label">Vues Facebook sur le discours de la présidente, 55 300 vues vidéo totales, 30 000 clics vers le rapport, campagnes multilingues en 10 langues.</div>
+        <div class="label">
+          <span class="fr">Vues Facebook sur le discours de la présidente, 55 300 vues vidéo totales, 30 000 clics vers le rapport, campagnes multilingues en 10 langues.</span>
+          <span class="en">Facebook views of the president's address, 55,300 total video views, 30,000 clicks to the report, multilingual campaigns in 10 languages.</span>
+        </div>
       </div>
       <div class="kpi big">
-        <div class="cat">Impact social</div>
+        <div class="cat"><span class="fr">Impact social</span><span class="en">Social impact</span></div>
         <div class="big-num">3,57 M</div>
-        <div class="label">Impressions via campagnes payantes. Hausse de l'engagement de +500 % en glissement annuel. 554 mentions, 1 783 interactions sur le discours.</div>
+        <div class="label">
+          <span class="fr">Impressions via campagnes payantes. Hausse de l'engagement de +500 % en glissement annuel. 554 mentions, 1 783 interactions sur le discours.</span>
+          <span class="en">Impressions via paid campaigns. +500% year-on-year engagement increase. 554 mentions, 1,783 interactions on the speech.</span>
+        </div>
       </div>
     </div>
   </div>
@@ -748,28 +884,31 @@
       <div class="ukraine-head">
         <div class="flag" aria-hidden="true"></div>
         <div>
-          <span class="section-tag">Solidarité</span>
-          <h2>Solidarité avec l'Ukraine</h2>
+          <span class="section-tag"><span class="fr">Solidarité</span><span class="en">Solidarity</span></span>
+          <h2><span class="fr">Solidarité avec l'Ukraine</span><span class="en">Solidarity with Ukraine</span></h2>
         </div>
       </div>
-      <p style="color:var(--ink-2);font-size:16px;max-width:800px">Grâce à l'Alliance européenne des villes et des régions pour la reconstruction de l'Ukraine, le CoR a inscrit l'approche décentralisée comme pilier de la stratégie de reconstruction, et renforcé le rôle des LRA dans le processus d'adhésion européenne de l'Ukraine.</p>
+      <p style="color:var(--ink-2);font-size:16px;max-width:800px">
+        <span class="fr">Grâce à l'Alliance européenne des villes et des régions pour la reconstruction de l'Ukraine, le CoR a inscrit l'approche décentralisée comme pilier de la stratégie de reconstruction, et renforcé le rôle des LRA dans le processus d'adhésion européenne de l'Ukraine.</span>
+        <span class="en">Through the European Alliance of Cities and Regions for the Reconstruction of Ukraine, the CoR has anchored the decentralised approach as a pillar of the reconstruction strategy, and strengthened the role of LRAs in Ukraine's EU accession process.</span>
+      </p>
 
       <div class="uk-grid">
         <div class="uk-stat">
           <div class="n">44</div>
-          <div class="l">Responsables ukrainiens formés via TIPS4UA (programme reconduit en 2026-2027)</div>
+          <div class="l"><span class="fr">Responsables ukrainiens formés via TIPS4UA (programme reconduit en 2026-2027)</span><span class="en">Ukrainian officials trained via TIPS4UA (programme extended to 2026-2027)</span></div>
         </div>
         <div class="uk-stat">
           <div class="n">400+</div>
-          <div class="l">Représentants LRA invités à l'Ukraine Recovery Conference 2025 (Rome)</div>
+          <div class="l"><span class="fr">Représentants LRA invités à l'Ukraine Recovery Conference 2025 (Rome)</span><span class="en">LRA representatives invited to the Ukraine Recovery Conference 2025 (Rome)</span></div>
         </div>
         <div class="uk-stat">
           <div class="n">16</div>
-          <div class="l">Partenariats inter-municipaux signés (1 au forum CoR + 15 en marge de l'URC)</div>
+          <div class="l"><span class="fr">Partenariats inter-municipaux signés (1 au forum CoR + 15 en marge de l'URC)</span><span class="en">Inter-municipal partnerships signed (1 at the CoR forum + 15 on the sidelines of the URC)</span></div>
         </div>
         <div class="uk-stat">
           <div class="n">3</div>
-          <div class="l">Pays d'accueil des Summer Camps pour enfants ukrainiens (SE, GR, MT)</div>
+          <div class="l"><span class="fr">Pays d'accueil des Summer Camps pour enfants ukrainiens (SE, GR, MT)</span><span class="en">Host countries for Summer Camps for Ukrainian children (SE, GR, MT)</span></div>
         </div>
       </div>
     </div>
@@ -780,91 +919,94 @@
 <section class="alt-bg">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-tag">Portfolio thématique</span>
-      <h2>Les domaines d'impact du CoR en 2025</h2>
-      <p>Un éventail d'avis et d'initiatives couvrant les grandes transitions de l'UE — cohésion, environnement, économie, démocratie, numérique.</p>
+      <span class="section-tag"><span class="fr">Portfolio thématique</span><span class="en">Thematic portfolio</span></span>
+      <h2><span class="fr">Les domaines d'impact du CoR en 2025</span><span class="en">The CoR's areas of impact in 2025</span></h2>
+      <p>
+        <span class="fr">Un éventail d'avis et d'initiatives couvrant les grandes transitions de l'UE — cohésion, environnement, économie, démocratie, numérique.</span>
+        <span class="en">A range of opinions and initiatives covering the EU's major transitions — cohesion, environment, economy, democracy, digital.</span>
+      </p>
     </div>
 
     <div class="topics">
       <div class="topic">
-        <div class="cat">Cohésion</div>
-        <h4>Politique de cohésion post-2027</h4>
-        <p>Partenariat, multilevel governance, défense d'une politique forte pour toutes les régions.</p>
+        <div class="cat"><span class="fr">Cohésion</span><span class="en">Cohesion</span></div>
+        <h4><span class="fr">Politique de cohésion post-2027</span><span class="en">Post-2027 cohesion policy</span></h4>
+        <p><span class="fr">Partenariat, multilevel governance, défense d'une politique forte pour toutes les régions.</span><span class="en">Partnership, multilevel governance, defending a strong policy for all regions.</span></p>
       </div>
       <div class="topic">
-        <div class="cat">Cohésion</div>
-        <h4>Logement abordable</h4>
-        <p>Impact direct sur les conclusions EPSCO, la résolution PE et le comité HOUS.</p>
+        <div class="cat"><span class="fr">Cohésion</span><span class="en">Cohesion</span></div>
+        <h4><span class="fr">Logement abordable</span><span class="en">Affordable housing</span></h4>
+        <p><span class="fr">Impact direct sur les conclusions EPSCO, la résolution PE et le comité HOUS.</span><span class="en">Direct impact on EPSCO conclusions, the EP resolution and the HOUS committee.</span></p>
       </div>
       <div class="topic">
-        <div class="cat">Cohésion</div>
+        <div class="cat"><span class="fr">Cohésion</span><span class="en">Cohesion</span></div>
         <h4>MFF 2028-2034</h4>
-        <p>19 renvois pour 2026, lettre inter-groupes au PE, mobilisation Cohesion Alliance.</p>
+        <p><span class="fr">19 renvois pour 2026, lettre inter-groupes au PE, mobilisation Cohesion Alliance.</span><span class="en">19 referrals for 2026, cross-group letter at the EP, Cohesion Alliance mobilisation.</span></p>
       </div>
       <div class="topic">
-        <div class="cat">Cohésion</div>
-        <h4>Recherche — FP10</h4>
-        <p>Enveloppe de 175,3 Mds €, Regional Innovation Valleys préservées post-2028.</p>
+        <div class="cat"><span class="fr">Cohésion</span><span class="en">Cohesion</span></div>
+        <h4><span class="fr">Recherche — FP10</span><span class="en">Research — FP10</span></h4>
+        <p><span class="fr">Enveloppe de 175,3 Mds €, Regional Innovation Valleys préservées post-2028.</span><span class="en">Envelope of €175.3 bn, Regional Innovation Valleys preserved post-2028.</span></p>
       </div>
       <div class="topic">
-        <div class="cat">Résilience</div>
-        <h4>Pacte européen pour l'océan</h4>
-        <p>11 propositions CoR intégrées, Ocean Act prévu 2026-2027.</p>
+        <div class="cat"><span class="fr">Résilience</span><span class="en">Resilience</span></div>
+        <h4><span class="fr">Pacte européen pour l'océan</span><span class="en">European Ocean Pact</span></h4>
+        <p><span class="fr">11 propositions CoR intégrées, Ocean Act prévu 2026-2027.</span><span class="en">11 CoR proposals integrated, Ocean Act expected 2026-2027.</span></p>
       </div>
       <div class="topic">
-        <div class="cat">Résilience</div>
-        <h4>Résilience hydrique</h4>
-        <p>Priorité stratégique du mandat, 1er Water Resilience Forum co-organisé.</p>
+        <div class="cat"><span class="fr">Résilience</span><span class="en">Resilience</span></div>
+        <h4><span class="fr">Résilience hydrique</span><span class="en">Water resilience</span></h4>
+        <p><span class="fr">Priorité stratégique du mandat, 1er Water Resilience Forum co-organisé.</span><span class="en">Strategic priority of the term; first Water Resilience Forum co-organised.</span></p>
       </div>
       <div class="topic">
-        <div class="cat">Résilience</div>
-        <h4>Transition énergétique</h4>
-        <p>Action Plan for Affordable Energy, EU Agenda for Cities façonnée par les avis CoR.</p>
+        <div class="cat"><span class="fr">Résilience</span><span class="en">Resilience</span></div>
+        <h4><span class="fr">Transition énergétique</span><span class="en">Energy transition</span></h4>
+        <p><span class="fr">Action Plan for Affordable Energy, EU Agenda for Cities façonnée par les avis CoR.</span><span class="en">Action Plan for Affordable Energy, EU Agenda for Cities shaped by CoR opinions.</span></p>
       </div>
       <div class="topic">
-        <div class="cat">Résilience</div>
-        <h4>Transport & automobile</h4>
-        <p>EMDS, Automotive Regions Alliance, Déclaration de Munich.</p>
+        <div class="cat"><span class="fr">Résilience</span><span class="en">Resilience</span></div>
+        <h4><span class="fr">Transport & automobile</span><span class="en">Transport & automotive</span></h4>
+        <p><span class="fr">EMDS, Automotive Regions Alliance, Déclaration de Munich.</span><span class="en">EMDS, Automotive Regions Alliance, Munich Declaration.</span></p>
       </div>
       <div class="topic">
-        <div class="cat">Résilience</div>
-        <h4>Climat global — COP30</h4>
-        <p>1er Pre-COP subnational européen, endossement EU de la Coalition CHAMP.</p>
+        <div class="cat"><span class="fr">Résilience</span><span class="en">Resilience</span></div>
+        <h4><span class="fr">Climat global — COP30</span><span class="en">Global climate — COP30</span></h4>
+        <p><span class="fr">1er Pre-COP subnational européen, endossement EU de la Coalition CHAMP.</span><span class="en">First European Subnational Pre-COP, EU endorsement of the CHAMP Coalition.</span></p>
       </div>
       <div class="topic">
-        <div class="cat">Résilience</div>
-        <h4>Intelligence artificielle</h4>
-        <p>Opinion présentée au Council TELECOM, Digital Participatory Forum co-organisé avec l'AI Office.</p>
+        <div class="cat"><span class="fr">Résilience</span><span class="en">Resilience</span></div>
+        <h4><span class="fr">Intelligence artificielle</span><span class="en">Artificial intelligence</span></h4>
+        <p><span class="fr">Opinion présentée au Council TELECOM, Digital Participatory Forum co-organisé avec l'AI Office.</span><span class="en">Opinion presented at the TELECOM Council, Digital Participatory Forum co-organised with the AI Office.</span></p>
       </div>
       <div class="topic">
-        <div class="cat">Proximité</div>
+        <div class="cat"><span class="fr">Proximité</span><span class="en">Proximity</span></div>
         <h4>Rule of law</h4>
-        <p>Approche systémique du rôle des LRA, auditions PE, EESC, Commission.</p>
+        <p><span class="fr">Approche systémique du rôle des LRA, auditions PE, EESC, Commission.</span><span class="en">Systemic approach to the role of LRAs; hearings at the EP, EESC and Commission.</span></p>
       </div>
       <div class="topic">
-        <div class="cat">Proximité</div>
+        <div class="cat"><span class="fr">Proximité</span><span class="en">Proximity</span></div>
         <h4>Mayor Adamowicz Award</h4>
-        <p>Lauréat : Vitaliy Klitschko, maire de Kyiv ; couverture dans 15 pays.</p>
+        <p><span class="fr">Lauréat : Vitaliy Klitschko, maire de Kyiv ; couverture dans 15 pays.</span><span class="en">Laureate: Vitaliy Klitschko, Mayor of Kyiv; coverage in 15 countries.</span></p>
       </div>
       <div class="topic">
-        <div class="cat">Proximité</div>
-        <h4>Égalité & intergénérationnel</h4>
-        <p>Avis sur la Roadmap for Women's Rights et sur l'équité intergénérationnelle.</p>
+        <div class="cat"><span class="fr">Proximité</span><span class="en">Proximity</span></div>
+        <h4><span class="fr">Égalité & intergénérationnel</span><span class="en">Equality & intergenerational</span></h4>
+        <p><span class="fr">Avis sur la Roadmap for Women's Rights et sur l'équité intergénérationnelle.</span><span class="en">Opinions on the Roadmap for Women's Rights and intergenerational fairness.</span></p>
       </div>
       <div class="topic">
-        <div class="cat">Proximité</div>
+        <div class="cat"><span class="fr">Proximité</span><span class="en">Proximity</span></div>
         <h4>Zero long-term unemployment</h4>
-        <p>Projet pilote de la Commission avec financement ESF+ signé (sept. 2025).</p>
+        <p><span class="fr">Projet pilote de la Commission avec financement ESF+ signé (sept. 2025).</span><span class="en">Commission pilot project with ESF+ funding signed (Sept 2025).</span></p>
       </div>
       <div class="topic">
-        <div class="cat">Proximité</div>
+        <div class="cat"><span class="fr">Proximité</span><span class="en">Proximity</span></div>
         <h4>Global Gateway</h4>
-        <p>Opinion sur la localisation reprise dans le rapport PE.</p>
+        <p><span class="fr">Opinion sur la localisation reprise dans le rapport PE.</span><span class="en">Opinion on localisation taken up in the EP report.</span></p>
       </div>
       <div class="topic">
-        <div class="cat">Proximité</div>
-        <h4>Diplomatie subnationale</h4>
-        <p>1re European Public Diplomacy Week, Pact pour la Méditerranée (ARLEM).</p>
+        <div class="cat"><span class="fr">Proximité</span><span class="en">Proximity</span></div>
+        <h4><span class="fr">Diplomatie subnationale</span><span class="en">Subnational diplomacy</span></h4>
+        <p><span class="fr">1re European Public Diplomacy Week, Pact pour la Méditerranée (ARLEM).</span><span class="en">First European Public Diplomacy Week, Pact for the Mediterranean (ARLEM).</span></p>
       </div>
     </div>
   </div>
@@ -874,25 +1016,28 @@
 <section>
   <div class="wrap">
     <div class="outlook">
-      <span class="section-tag">Perspectives 2026</span>
-      <h2>Regarder vers l'avant</h2>
-      <p class="lede">Le mandat 2025-2030 entre dans sa phase opérationnelle. Trois chantiers déjà engagés vont structurer l'impact du CoR dans les prochains mois.</p>
+      <span class="section-tag"><span class="fr">Perspectives 2026</span><span class="en">2026 outlook</span></span>
+      <h2><span class="fr">Regarder vers l'avant</span><span class="en">Looking ahead</span></h2>
+      <p class="lede">
+        <span class="fr">Le mandat 2025-2030 entre dans sa phase opérationnelle. Trois chantiers déjà engagés vont structurer l'impact du CoR dans les prochains mois.</span>
+        <span class="en">The 2025-2030 term is entering its operational phase. Three ongoing projects will shape the CoR's impact in the coming months.</span>
+      </p>
 
       <div class="outlook-grid">
         <div class="out-card">
           <div class="n">19</div>
-          <h4>Renvois MFF</h4>
-          <p>Les 19 avis liés au MFF seront adoptés en 2026 ; opportunité unique d'influencer le prochain cadre financier pluriannuel.</p>
+          <h4><span class="fr">Renvois MFF</span><span class="en">MFF referrals</span></h4>
+          <p><span class="fr">Les 19 avis liés au MFF seront adoptés en 2026 ; opportunité unique d'influencer le prochain cadre financier pluriannuel.</span><span class="en">The 19 MFF-related opinions will be adopted in 2026 — a unique opportunity to influence the next Multiannual Financial Framework.</span></p>
         </div>
         <div class="out-card">
           <div class="n">ECA</div>
-          <h4>Audit de la Cour des comptes</h4>
-          <p>L'audit de performance mené en 2025 nourrira les recommandations de la Cour des comptes et un plan de suivi pluriannuel.</p>
+          <h4><span class="fr">Audit de la Cour des comptes</span><span class="en">European Court of Auditors audit</span></h4>
+          <p><span class="fr">L'audit de performance mené en 2025 nourrira les recommandations de la Cour des comptes et un plan de suivi pluriannuel.</span><span class="en">The 2025 performance audit will inform the Court's recommendations and a multi-year follow-up plan.</span></p>
         </div>
         <div class="out-card">
           <div class="n">2026</div>
-          <h4>Culture d'impact ancrée</h4>
-          <p>La fonction de coordinateur du rapport d'impact et le pilotage par KPIs intègrent définitivement l'ADN institutionnel du CoR.</p>
+          <h4><span class="fr">Culture d'impact ancrée</span><span class="en">Impact culture embedded</span></h4>
+          <p><span class="fr">La fonction de coordinateur du rapport d'impact et le pilotage par KPIs intègrent définitivement l'ADN institutionnel du CoR.</span><span class="en">The impact report coordinator role and KPI-based steering are now permanently part of the CoR's institutional DNA.</span></p>
         </div>
       </div>
     </div>
@@ -904,14 +1049,42 @@
   <div class="wrap">
     <div>
       <div class="brand">European Committee of the Regions</div>
-      <div class="meta">Annual Impact Report 2025 — Référence : COR-2025-03675-10-00-NB-EDI</div>
+      <div class="meta">
+        <span class="fr">Annual Impact Report 2025 — Référence : COR-2025-03675-10-00-NB-EDI</span>
+        <span class="en">Annual Impact Report 2025 — Reference: COR-2025-03675-10-00-NB-EDI</span>
+      </div>
     </div>
     <div class="meta">
-      Infographie synthétique · Octobre 2026<br>
-      Source : <a href="https://cor.europa.eu" target="_blank" rel="noopener">cor.europa.eu</a>
+      <span class="fr">Infographie synthétique · Octobre 2026<br>Version EN générée par IA.<br>Source : <a href="https://cor.europa.eu" target="_blank" rel="noopener">cor.europa.eu</a></span>
+      <span class="en">Summary infographic · October 2026<br>EN version is AI-generated.<br>Source: <a href="https://cor.europa.eu" target="_blank" rel="noopener">cor.europa.eu</a></span>
     </div>
   </div>
 </footer>
+
+<script>
+  // Language switcher
+  (function(){
+    var buttons = document.querySelectorAll('.lang-switch button');
+    var saved = null;
+    try { saved = localStorage.getItem('cor-infographic-lang'); } catch(e){}
+    if (saved === 'fr' || saved === 'en') {
+      document.documentElement.lang = saved;
+    }
+    function setActive(lang){
+      document.documentElement.lang = lang;
+      buttons.forEach(function(b){
+        var on = b.dataset.lang === lang;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      try { localStorage.setItem('cor-infographic-lang', lang); } catch(e){}
+    }
+    setActive(document.documentElement.lang || 'fr');
+    buttons.forEach(function(b){
+      b.addEventListener('click', function(){ setActive(b.dataset.lang); });
+    });
+  })();
+</script>
 
 </body>
 </html>

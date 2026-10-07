@@ -1,1 +1,917 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A multi-layer, accessible interactive story based on the EU Annual Report on the State of Regions and Cities 2026."><meta name="theme-color" content="#063947"><title>Built locally | State of regions and cities 2026</title><link rel="stylesheet" href="styles-v2.css"></head><body data-audience="citizen"><a class="skip" href="#main">Skip to main content</a><header class="mast"><a class="brand" href="#top" aria-label="Back to top"><span aria-hidden="true">◫</span> State of regions and cities 2026</a><nav aria-label="Primary"><a href="#pulse">Pulse</a><a href="#stories">Stories</a><a href="#themes">Themes</a><a href="#thermometer">Thermometer</a><a href="#evidence">Evidence</a></nav><button id="menu" class="icon" aria-expanded="false" aria-controls="journey">Reading mode</button></header><aside id="journey" class="journey" aria-label="Choose a reading mode"><p><strong>Choose your depth</strong></p><div role="group" aria-label="Audience"><button data-audience="citizen" class="selected">1-minute story</button><button data-audience="colleague">CoR briefing</button><button data-audience="press">Press & policy desk</button></div><button id="motion" aria-pressed="false">Reduce movement</button><button id="contrast" aria-pressed="false">High contrast</button></aside><main id="main"><section id="top" class="hero"><div class="rings" aria-hidden="true"></div><div class="hero-copy"><p class="kicker">EU Annual Report 2026</p><h1>Europe’s future is built <em>locally.</em></h1><p class="hero-lead">A visual journey through the pressures facing Europe’s regions and cities, and the places already turning policy into results.</p><div class="hero-actions"><a class="primary" href="#pulse">Start with the big picture</a><button id="randomStory">Take me to a local story</button></div></div><div class="hero-panel" aria-label="Central message"><p>“A Europe capable of competing in the world cannot be built by weakening the connections between its places.”</p><span>Condensed from the report foreword</span></div></section><section id="pulse" class="section pulse"><header class="section-head"><div><p class="kicker">Europe in ten signals</p><h2>Scroll the evidence</h2></div><p class="layer colleague press">Each indicator opens into sectoral context, territorial implications and source-page guidance.</p></header><div id="signalRail" class="signal-rail" tabindex="0" aria-label="Key statistics"></div></section><section class="manifesto"><p>Competitiveness happens in places.</p><p>Preparedness starts on the ground.</p><p>Trust grows through proximity.</p></section><section id="stories" class="section"><header class="section-head"><div><p class="kicker">People, places, results</p><h2>The local story atlas</h2></div><p>Explore real interventions from across Europe. Search by place, topic or result.</p></header><div class="filters"><label>Search stories<input id="storySearch" type="search" placeholder="Try housing, Poland or energy"></label><label>Theme<select id="storyTheme"><option value="all">All themes</option></select></label><button id="clearStories">Clear filters</button></div><p id="storyCount" aria-live="polite"></p><div id="storyGrid" class="story-grid"></div></section><section id="themes" class="section dark"><header class="section-head"><div><p class="kicker">Ten interconnected issues</p><h2>From pressure to response</h2></div><p>Choose a subject to reveal its headline evidence, local dimension and policy asks.</p></header><div class="theme-layout"><div id="themeTabs" role="tablist" aria-label="Report themes"></div><article id="themePanel" class="theme-panel" role="tabpanel" tabindex="0"></article></div></section><section id="thermometer" class="section thermo"><header class="section-head"><div><p class="kicker">Regional Thermometer</p><h2>Growth alone does not tell the story</h2></div><p>The report compares seven indicators across 244 NUTS 2 regions and excludes missing values from progress calculations.</p></header><div class="thermo-grid"><div class="gauge" aria-label="Only 12 percent of regions improved in six of seven indicators"><div class="gauge-core"><strong>12%</strong><span>improved in six of seven indicators</span></div></div><div class="thermo-copy"><ul><li><strong>1 in 2</strong> regions experienced increased poverty or social exclusion.</li><li><strong>More than half</strong> saw labour-market conditions deteriorate.</li><li><strong>1 in 3</strong> did not reduce greenhouse-gas emissions.</li><li><strong>95%</strong> recorded rising old-age pressure.</li></ul><details class="press"><summary>Methodological note for specialist use</summary><p>The seven indicators are GDP per capita in PPS, unemployment, poverty or social exclusion, inability to face unexpected expenses, emissions by sector, old-age dependency and the JRC Vulnerability Index. Comparisons use the two latest available years for each indicator.</p></details></div></div></section><section class="section choices"><header class="section-head"><div><p class="kicker">The policy choice</p><h2>What kind of Europe?</h2></div></header><div class="choice-grid"><article><span>Centralised</span><h3>Decisions move faster</h3><p>But territorial knowledge, partnership and ownership can be weakened.</p></article><div class="versus" aria-hidden="true">or</div><article><span>Place-based</span><h3>More places contribute</h3><p>Investment, knowledge, skills and opportunity can circulate across territories.</p></article></div><div class="asks"><h3>Five principles running through the report</h3><ol><li>Preserve cohesion policy for all regions.</li><li>Legally anchor partnership and multilevel governance.</li><li>Apply a “do no harm to cohesion” principle.</li><li>Use place-based territorial instruments.</li><li>Integrate territorial impact assessments and regional checks.</li></ol></div></section><section id="evidence" class="section evidence"><header class="section-head"><div><p class="kicker">Press and policy desk</p><h2>Evidence you can reuse responsibly</h2></div><p class="layer press">Expand a dossier for framing notes, caveats and source pages.</p></header><div id="dossiers"></div><div class="source-box"><h3>Primary source</h3><p><cite>The state of regions and cities: EU annual report 2026</cite>, European Committee of the Regions, Brussels, October 2026. CdR_0463/10-2026. ISBN 978-92-895-4140-4. DOI 10.2863/1166719.</p><p>The report states that reuse is authorised under CC BY 4.0 unless otherwise noted. Separate permission may be required for third-party photographs, maps and other works. This prototype uses original CSS visuals and does not reproduce third-party photography.</p></div></section></main><footer><p><strong>Strong regions. Strong cities. Strong Europe.</strong></p><p>Interactive editorial prototype based on the EU Annual Report 2026.</p><a href="#top">Back to top</a></footer><script src="data-v2.js"></script><script src="app-v2.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoR Annual Impact Report 2025 — Infographie</title>
+<meta name="description" content="Infographie complète du rapport d'impact annuel 2025 du Comité européen des régions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cor-blue:#0E4194;
+    --cor-blue-dark:#082659;
+    --cor-blue-light:#E8EFFA;
+    --eu-gold:#FFCC00;
+    --cohesion:#1F6FEB;
+    --resilience:#2EA26B;
+    --proximity:#E26A2C;
+    --ink:#0F172A;
+    --ink-2:#334155;
+    --ink-3:#64748B;
+    --bg:#F8FAFC;
+    --card:#FFFFFF;
+    --border:#E2E8F0;
+    --accent:#F4F7FD;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-0.02em;line-height:1.15}
+
+  /* ===== HERO ===== */
+  .hero{
+    background:
+      radial-gradient(1200px 500px at 10% -10%, rgba(255,204,0,.18), transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, rgba(46,162,107,.18), transparent 60%),
+      linear-gradient(135deg, var(--cor-blue-dark), var(--cor-blue));
+    color:#fff;
+    padding:80px 0 60px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,.06) 1px, transparent 0);
+    background-size:32px 32px;
+    pointer-events:none;
+  }
+  .hero .wrap{position:relative;z-index:1}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:6px 14px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:999px;
+    font-size:13px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;
+    margin-bottom:24px;
+  }
+  .eyebrow::before{content:"";width:8px;height:8px;background:var(--eu-gold);border-radius:50%}
+  .hero h1{
+    font-size:clamp(36px,5.5vw,68px);
+    font-weight:700;
+    margin-bottom:16px;
+    max-width:900px;
+  }
+  .hero h1 .ac{color:var(--eu-gold)}
+  .hero .lede{
+    font-size:clamp(16px,1.5vw,19px);
+    max-width:720px;
+    color:rgba(255,255,255,.85);
+    margin-bottom:48px;
+  }
+
+  .hero-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:rgba(255,255,255,.1);
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.12);
+  }
+  .hs-cell{
+    background:rgba(14,65,148,.6);
+    backdrop-filter:blur(10px);
+    padding:28px 24px;
+  }
+  .hs-cell .n{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:clamp(32px,3.8vw,52px);
+    font-weight:700;
+    line-height:1;
+    color:#fff;
+    margin-bottom:8px;
+  }
+  .hs-cell .l{
+    font-size:13px;
+    color:rgba(255,255,255,.75);
+    text-transform:uppercase;
+    letter-spacing:.06em;
+  }
+  @media(max-width:720px){.hero-stats{grid-template-columns:repeat(2,1fr)}}
+
+  /* ===== SECTION ===== */
+  section{padding:80px 0}
+  .section-head{margin-bottom:48px;max-width:720px}
+  .section-tag{
+    display:inline-block;
+    padding:4px 12px;
+    background:var(--cor-blue-light);
+    color:var(--cor-blue);
+    border-radius:999px;
+    font-size:12px;font-weight:600;letter-spacing:.08em;
+    text-transform:uppercase;margin-bottom:16px;
+  }
+  .section-head h2{font-size:clamp(28px,3.2vw,42px);font-weight:700;margin-bottom:12px}
+  .section-head p{color:var(--ink-2);font-size:17px}
+
+  /* ===== 3 PRIORITIES ===== */
+  .priorities{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:900px){.priorities{grid-template-columns:1fr}}
+  .pri{
+    background:var(--card);
+    border-radius:20px;
+    padding:36px 28px;
+    border:1px solid var(--border);
+    position:relative;
+    overflow:hidden;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .pri:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(14,65,148,.08)}
+  .pri::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:6px;
+    background:var(--c);
+  }
+  .pri.cohesion{--c:var(--cohesion)}
+  .pri.resilience{--c:var(--resilience)}
+  .pri.proximity{--c:var(--proximity)}
+  .pri-num{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:72px;
+    line-height:1;
+    color:var(--c);
+    opacity:.15;
+    position:absolute;
+    top:16px;right:24px;
+  }
+  .pri h3{font-size:24px;margin-bottom:12px;color:var(--c)}
+  .pri .sub{color:var(--ink-3);font-size:14px;margin-bottom:24px;font-weight:500;text-transform:uppercase;letter-spacing:.05em}
+  .pri ul{list-style:none;padding:0}
+  .pri li{
+    position:relative;
+    padding-left:22px;
+    padding-top:10px;padding-bottom:10px;
+    font-size:15px;
+    color:var(--ink-2);
+    border-bottom:1px dashed var(--border);
+  }
+  .pri li:last-child{border:none}
+  .pri li::before{
+    content:"";
+    position:absolute;left:0;top:17px;
+    width:10px;height:10px;
+    background:var(--c);
+    border-radius:50%;
+    opacity:.3;
+  }
+  .pri li strong{color:var(--ink);font-weight:600}
+
+  /* ===== KPI BIG BLOCK ===== */
+  .kpi-grid{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:20px;
+  }
+  .kpi{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:28px;
+    position:relative;
+    overflow:hidden;
+  }
+  .kpi.big{grid-column:span 6}
+  .kpi.med{grid-column:span 4}
+  .kpi.sml{grid-column:span 3}
+  .kpi.hero-k{
+    grid-column:span 6;
+    background:linear-gradient(135deg, var(--cor-blue), var(--cor-blue-dark));
+    color:#fff;border:none;
+  }
+  @media(max-width:900px){
+    .kpi.big,.kpi.med,.kpi.sml,.kpi.hero-k{grid-column:span 12}
+  }
+  .kpi .cat{
+    font-size:11px;font-weight:600;color:var(--cor-blue);
+    text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;
+  }
+  .kpi.hero-k .cat{color:var(--eu-gold)}
+  .kpi .big-num{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:56px;font-weight:700;line-height:1;color:var(--ink);
+    margin-bottom:8px;
+  }
+  .kpi.hero-k .big-num{color:#fff;font-size:68px}
+  .kpi .label{color:var(--ink-2);font-size:15px}
+  .kpi.hero-k .label{color:rgba(255,255,255,.85)}
+  .kpi .delta{
+    display:inline-flex;align-items:center;gap:4px;
+    margin-top:12px;
+    padding:3px 10px;background:#DCFCE7;color:#166534;
+    border-radius:999px;font-size:12px;font-weight:600;
+  }
+  .kpi.hero-k .delta{background:rgba(255,204,0,.25);color:var(--eu-gold)}
+  .kpi .delta::before{content:"▲"}
+
+  /* Mini bar in KPI */
+  .mini-bars{display:flex;gap:4px;align-items:flex-end;margin-top:16px;height:50px}
+  .mini-bars .b{flex:1;background:var(--cor-blue-light);border-radius:4px 4px 0 0}
+  .mini-bars .b.on{background:var(--cor-blue)}
+
+  /* ===== TIMELINE ===== */
+  .timeline{position:relative;padding-left:24px}
+  .timeline::before{
+    content:"";position:absolute;left:7px;top:12px;bottom:12px;
+    width:2px;background:linear-gradient(var(--cor-blue),var(--eu-gold),var(--resilience));
+  }
+  .tl-item{position:relative;padding-bottom:36px;padding-left:28px}
+  .tl-item::before{
+    content:"";position:absolute;left:-21px;top:4px;
+    width:16px;height:16px;
+    background:#fff;border:3px solid var(--cor-blue);
+    border-radius:50%;
+  }
+  .tl-item.m::before{border-color:var(--eu-gold)}
+  .tl-item.r::before{border-color:var(--resilience)}
+  .tl-date{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;color:var(--cor-blue);font-size:14px;
+    text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;
+  }
+  .tl-item.m .tl-date{color:#B88800}
+  .tl-item.r .tl-date{color:var(--resilience)}
+  .tl-item h4{font-size:17px;font-weight:600;margin-bottom:4px}
+  .tl-item p{color:var(--ink-2);font-size:14.5px}
+
+  /* ===== COMM DASHBOARD ===== */
+  .comm-dash{display:grid;grid-template-columns:1.3fr 1fr;gap:32px}
+  @media(max-width:900px){.comm-dash{grid-template-columns:1fr}}
+  .comm-chart{
+    background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;
+  }
+  .chart-title{font-size:14px;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:20px}
+  .chart-row{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+  .chart-row:last-child{margin-bottom:0}
+  .chart-label{min-width:90px;font-size:13px;color:var(--ink-2);font-weight:500}
+  .chart-bar-wrap{flex:1;background:var(--accent);border-radius:6px;height:28px;overflow:hidden;position:relative}
+  .chart-bar{height:100%;border-radius:6px;display:flex;align-items:center;padding:0 10px;color:#fff;font-size:12px;font-weight:600}
+  .chart-value{min-width:120px;text-align:right;font-family:'Space Grotesk',sans-serif;font-weight:600;color:var(--ink)}
+  .chart-value small{color:#166534;font-weight:500;margin-left:4px;font-size:11px}
+
+  .comm-side{display:grid;gap:16px;grid-template-columns:1fr 1fr;align-content:start}
+  .mini-k{
+    background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;
+  }
+  .mini-k .n{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:var(--cor-blue);line-height:1;margin-bottom:6px}
+  .mini-k .l{font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.05em}
+
+  /* ===== NETWORK / ALLIANCES ===== */
+  .network-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:900px){.network-grid{grid-template-columns:1fr}}
+  .net-card{
+    background:var(--card);border:1px solid var(--border);border-radius:16px;
+    padding:28px;position:relative;
+  }
+  .net-card .ico{
+    width:48px;height:48px;border-radius:12px;
+    background:var(--cor-blue-light);color:var(--cor-blue);
+    display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;
+  }
+  .net-card h3{font-size:19px;margin-bottom:8px}
+  .net-card .n{font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:700;color:var(--cor-blue);margin:8px 0}
+  .net-card p{color:var(--ink-2);font-size:14.5px;margin-bottom:12px}
+  .net-stats{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;padding-top:16px;border-top:1px dashed var(--border)}
+  .net-stat{font-size:12px;color:var(--ink-3)}
+  .net-stat strong{display:block;font-size:17px;color:var(--ink);font-family:'Space Grotesk',sans-serif;font-weight:600}
+
+  /* ===== UKRAINE / BIG CTA SECTION ===== */
+  .ukraine{
+    background:linear-gradient(135deg, #F6E05E22, #0057B722);
+    border:1px solid var(--border);
+    border-radius:24px;
+    padding:48px;
+  }
+  @media(max-width:720px){.ukraine{padding:28px}}
+  .ukraine-head{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+  .ukraine-head .flag{
+    width:48px;height:32px;border-radius:4px;
+    background:linear-gradient(to bottom, #0057B7 50%, #FFD700 50%);
+    flex-shrink:0;
+  }
+  .ukraine-head h2{font-size:28px}
+  .uk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
+  @media(max-width:720px){.uk-grid{grid-template-columns:repeat(2,1fr)}}
+  .uk-stat{background:#fff;border-radius:12px;padding:20px;border:1px solid var(--border)}
+  .uk-stat .n{font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:700;color:#0057B7;line-height:1}
+  .uk-stat .l{font-size:12px;color:var(--ink-3);margin-top:6px;line-height:1.3}
+
+  /* ===== TOPICS GRID ===== */
+  .topics{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:900px){.topics{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:500px){.topics{grid-template-columns:1fr}}
+  .topic{
+    background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:20px;transition:all .2s;
+  }
+  .topic:hover{border-color:var(--cor-blue);transform:translateY(-2px)}
+  .topic .cat{font-size:11px;color:var(--cor-blue);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+  .topic h4{font-size:15px;margin-bottom:8px;line-height:1.3}
+  .topic p{font-size:13px;color:var(--ink-2);line-height:1.5}
+
+  /* ===== OUTLOOK ===== */
+  .outlook{
+    background:var(--cor-blue-dark);
+    color:#fff;
+    border-radius:24px;
+    padding:56px 48px;
+    position:relative;
+    overflow:hidden;
+  }
+  @media(max-width:720px){.outlook{padding:36px 28px}}
+  .outlook::before{
+    content:"";
+    position:absolute;top:-100px;right:-100px;
+    width:400px;height:400px;
+    background:radial-gradient(circle, rgba(255,204,0,.15), transparent 70%);
+    pointer-events:none;
+  }
+  .outlook .section-tag{background:rgba(255,204,0,.15);color:var(--eu-gold)}
+  .outlook h2{color:#fff;font-size:36px;margin-bottom:16px}
+  .outlook p.lede{color:rgba(255,255,255,.8);font-size:17px;max-width:720px;margin-bottom:32px}
+  .outlook-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:16px}
+  @media(max-width:900px){.outlook-grid{grid-template-columns:1fr}}
+  .out-card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:14px;padding:24px;
+    backdrop-filter:blur(10px);
+  }
+  .out-card .n{font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;color:var(--eu-gold);line-height:1}
+  .out-card h4{color:#fff;font-size:17px;margin:12px 0 6px}
+  .out-card p{color:rgba(255,255,255,.75);font-size:14px}
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:#0A1A33;color:rgba(255,255,255,.7);
+    padding:48px 0 32px;margin-top:40px;
+  }
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+  footer .brand{font-weight:700;color:#fff;font-size:16px}
+  footer .meta{font-size:13px}
+  footer a{color:var(--eu-gold);text-decoration:none}
+
+  /* ===== DIVIDERS ===== */
+  .alt-bg{background:#fff}
+
+  /* print */
+  @media print{
+    .hero,.outlook{break-inside:avoid}
+    section{break-inside:avoid-page}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Rapport d'impact annuel · 2025</span>
+    <h1>Comité européen des régions<br><span class="ac">— 2025 en impact</span></h1>
+    <p class="lede">Vue d'ensemble des réalisations du CoR en 2025 : représenter les autorités locales et régionales dans le processus décisionnel européen, autour de trois priorités politiques — <strong style="color:#fff">cohésion, résilience, proximité</strong>.</p>
+
+    <div class="hero-stats">
+      <div class="hs-cell">
+        <div class="n">42</div>
+        <div class="l">Avis adoptés</div>
+      </div>
+      <div class="hs-cell">
+        <div class="n">7</div>
+        <div class="l">Résolutions</div>
+      </div>
+      <div class="hs-cell">
+        <div class="n">3</div>
+        <div class="l">Priorités politiques</div>
+      </div>
+      <div class="hs-cell">
+        <div class="n">19</div>
+        <div class="l">Renvois MFF (2026)</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 3 PRIORITIES ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Mandat 2025–2030</span>
+      <h2>Trois priorités, un cap</h2>
+      <p>Pour son 8ème mandat, le CoR s'est doté de trois priorités structurantes. Chacune a produit des impacts tangibles sur la législation et les stratégies européennes en 2025.</p>
+    </div>
+
+    <div class="priorities">
+      <!-- COHESION -->
+      <div class="pri cohesion">
+        <div class="pri-num">01</div>
+        <div class="sub">Priorité</div>
+        <h3>Cohésion</h3>
+        <ul>
+          <li><strong>Conclusions Council (28 mars 2025)</strong> — reprise des messages clés du CoR sur l'implication des LRA dans la future politique de cohésion.</li>
+          <li><strong>Cadre Financier Pluriannuel post-2027</strong> — pression politique via l'Alliance de Cohésion, lettre des quatre groupes politiques du PE à la présidente von der Leyen.</li>
+          <li><strong>Housing</strong> — messages intégrés dans les conclusions EPSCO (1er déc.), la résolution du PE et le comité HOUS.</li>
+          <li><strong>Interreg post-2027</strong> — valeur ajoutée reconnue par le Conseil et proposition législative dédiée.</li>
+          <li><strong>FP10 / Horizon Europe</strong> — enveloppe proposée à <strong>175,3 Mds €</strong>, éléments CoR intégrés dans les propositions législatives du 16 juillet 2025.</li>
+          <li><strong>New European Bauhaus Boost</strong> — proposition CoR devenue action EU concrète pour les petites communes.</li>
+        </ul>
+      </div>
+
+      <!-- RESILIENCE -->
+      <div class="pri resilience">
+        <div class="pri-num">02</div>
+        <div class="sub">Priorité</div>
+        <h3>Résilience</h3>
+        <ul>
+          <li><strong>Pacte européen pour l'océan</strong> — contribution « essentielle » selon la Commission, <strong>11 propositions</strong> du CoR reprises dans la communication.</li>
+          <li><strong>COP30 / Climat global</strong> — reconnaissance des LRA dans les conclusions du Conseil et la résolution PE, 1er Pre-COP subnational européen convoqué par le CoR.</li>
+          <li><strong>Ocean Rise & Coastal Resilience Coalition</strong> — plus de <strong>1 000 villes et régions</strong>, représentant 1 milliard de personnes.</li>
+          <li><strong>Water Resilience Forum</strong> — 1ère édition organisée au CoR le 8 déc. avec la Commission, l'EESC et le JRC.</li>
+          <li><strong>Automotive Regions Alliance</strong> — Déclaration de Munich (sept. 2025) sur la transition de l'automobile vers 2035.</li>
+          <li><strong>Ukraine</strong> — TIPS4UA : 44 responsables ukrainiens formés, 400+ représentants LRA invités à l'URC2025 à Rome.</li>
+        </ul>
+      </div>
+
+      <!-- PROXIMITY -->
+      <div class="pri proximity">
+        <div class="pri-num">03</div>
+        <div class="sub">Priorité</div>
+        <h3>Proximité</h3>
+        <ul>
+          <li><strong>EU Local Councillors Network</strong> — <strong>3 000+ élus locaux</strong>, 1 700 autorités engagées, 1 200 initiatives de communication, 350 councillors en visite à Bruxelles.</li>
+          <li><strong>Young Elected Politicians</strong> — 150 nouveaux YEPs recrutés, 881 actifs, 78 participants aux événements CoR.</li>
+          <li><strong>Rule of Law</strong> — opinion présentée au PE, EESC, Commission et experts via CEPS.</li>
+          <li><strong>Mayor Paweł Adamowicz Award</strong> — lauréat Vitaliy Klitschko, maire de Kyiv ; couverture média dans 15 pays.</li>
+          <li><strong>EuroPCom 2025</strong> — <strong>2 150 participants</strong>, 40 intervenants, pionnier dans l'usage de l'IA.</li>
+          <li><strong>Élections européennes 2024</strong> — impact reconnu dans le rapport PE de stocktaking (sept. 2025).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMUNICATION DASHBOARD ============ -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Communication</span>
+      <h2>Une année record pour la visibilité du CoR</h2>
+      <p>En 2025, les trois canaux stratégiques — presse, réseaux sociaux et web/streaming — ont atteint des niveaux inédits, portés par une approche plus stratégique et par les grands temps forts (EU Regions Week, EuroPCom, COP30).</p>
+    </div>
+
+    <div class="kpi-grid">
+      <!-- Hero KPI: Media -->
+      <div class="kpi hero-k">
+        <div class="cat">Mentions médias</div>
+        <div class="big-num">28 281</div>
+        <div class="label">Mentions médias en 2025 — plus haut niveau jamais mesuré</div>
+        <div class="delta">+60 % vs 2024</div>
+      </div>
+
+      <!-- Hero KPI: Social followers -->
+      <div class="kpi hero-k">
+        <div class="cat">Followers réseaux sociaux</div>
+        <div class="big-num">261 307</div>
+        <div class="label">Followers cumulés en fin d'année (vs 220 233 début 2025)</div>
+        <div class="delta">+18,5 %</div>
+      </div>
+
+      <!-- Web page views -->
+      <div class="kpi med">
+        <div class="cat">Site web</div>
+        <div class="big-num">2,4 M</div>
+        <div class="label">Pages vues sur cor.europa.eu</div>
+        <div class="delta">+41 % vs 2024</div>
+      </div>
+
+      <!-- Streaming -->
+      <div class="kpi med">
+        <div class="cat">Streaming</div>
+        <div class="big-num">178 K</div>
+        <div class="label">Vues live & VOD sur 282 réunions streamées</div>
+        <div class="delta">× 3 vs 2024 (55 000)</div>
+      </div>
+
+      <!-- Social engagement -->
+      <div class="kpi med">
+        <div class="cat">Vues organiques</div>
+        <div class="big-num">1,21 M</div>
+        <div class="label">Vues organiques — reels et collaborations</div>
+        <div class="delta">× 2 vs année précédente</div>
+      </div>
+    </div>
+
+    <div style="margin-top:40px" class="comm-dash">
+      <div class="comm-chart">
+        <div class="chart-title">Évolution des mentions médias — S1 vs S2</div>
+        <div class="chart-row">
+          <div class="chart-label">S1 2024</div>
+          <div class="chart-bar-wrap"><div class="chart-bar" style="background:#94A3B8;width:46%">8 800</div></div>
+          <div class="chart-value">8 800</div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">S2 2024</div>
+          <div class="chart-bar-wrap"><div class="chart-bar" style="background:#64748B;width:47%">8 800</div></div>
+          <div class="chart-value">8 800</div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">S1 2025</div>
+          <div class="chart-bar-wrap"><div class="chart-bar" style="background:var(--cor-blue);width:80%">15 202</div></div>
+          <div class="chart-value">15 202<small>record</small></div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">S2 2025</div>
+          <div class="chart-bar-wrap"><div class="chart-bar" style="background:var(--eu-gold);color:#082659;width:69%">13 079</div></div>
+          <div class="chart-value">13 079</div>
+        </div>
+        <p style="margin-top:20px;font-size:13px;color:var(--ink-3);border-top:1px dashed var(--border);padding-top:16px">Record historique sur un semestre et sur l'année entière, confirmant un renforcement net de la stratégie média.</p>
+      </div>
+
+      <div class="comm-side">
+        <div class="mini-k">
+          <div class="n">2 314</div>
+          <div class="l">Posts publiés</div>
+        </div>
+        <div class="mini-k">
+          <div class="n">83 178</div>
+          <div class="l">Engagements organiques</div>
+        </div>
+        <div class="mini-k">
+          <div class="n">85 %</div>
+          <div class="l">Membres actifs sur plusieurs plateformes</div>
+        </div>
+        <div class="mini-k">
+          <div class="n">10</div>
+          <div class="l">Langues des campagnes multilingues</div>
+        </div>
+        <div class="mini-k">
+          <div class="n">51-57 %</div>
+          <div class="l">Taux d'ouverture emailings</div>
+        </div>
+        <div class="mini-k">
+          <div class="n">45 K</div>
+          <div class="l">Vues live streams & vidéos à la demande</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Chronologie 2025</span>
+      <h2>Les temps forts de l'année</h2>
+      <p>Douze mois rythmés par des étapes législatives, des alliances renforcées et des rendez-vous à fort retentissement politique et médiatique.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">28 mars</div>
+        <h4>Conclusions du Conseil sur la politique de cohésion</h4>
+        <p>Reprise des messages clés du CoR sur l'implication active des LRA dans la future politique de cohésion.</p>
+      </div>
+      <div class="tl-item m">
+        <div class="tl-date">14-15 mai</div>
+        <h4>Session plénière + Conférence Budget UE</h4>
+        <p>Adoption de la résolution sur le prochain MFF. Rapporteure Maupertuis invitée à la Annual EU Budget Conference.</p>
+      </div>
+      <div class="tl-item r">
+        <div class="tl-date">9-13 juin</div>
+        <h4>UNOC3 à Nice</h4>
+        <p>Le CoR dans la délégation EU officielle. Lancement de la Coalition Ocean Rise & Coastal Resilience (1 000+ villes/régions).</p>
+      </div>
+      <div class="tl-item m">
+        <div class="tl-date">3-4 juillet</div>
+        <h4>EuroPCom 2025 — « Beyond words »</h4>
+        <p>2 150 participants, 40 intervenants, intégration pionnière d'outils IA pour la com publique.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">10-11 juillet</div>
+        <h4>Ukraine Recovery Conference, Rome</h4>
+        <p>400+ représentants LRA invités, lancement de l'European Partnership Hub, 15 jumelages signés en marge.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">16 juillet</div>
+        <h4>Proposition de la Commission sur le MFF 2028-2034</h4>
+        <p>Partiellement alignée sur les messages CoR, catalysant 19 renvois pour 2026 et une mobilisation politique majeure.</p>
+      </div>
+      <div class="tl-item r">
+        <div class="tl-date">13-16 octobre</div>
+        <h4>23e European Week of Regions and Cities</h4>
+        <p>6 500 participants, 80 pays, 143 sessions. Manifestation devant le PE pour défendre la politique de cohésion.</p>
+      </div>
+      <div class="tl-item m">
+        <div class="tl-date">Novembre</div>
+        <h4>COP30 — Belém + Local Leaders Forum, Rio</h4>
+        <p>Participation de la présidente du CoR. Endossement UE de la Coalition CHAMP pour une gouvernance multiniveau.</p>
+      </div>
+      <div class="tl-item r">
+        <div class="tl-date">1er décembre</div>
+        <h4>Conclusions EPSCO Housing</h4>
+        <p>Messages clés du CoR sur le logement abordable intégrés dans les conclusions.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">8 décembre</div>
+        <h4>1er European Water Resilience Forum</h4>
+        <p>Co-organisé au CoR avec la Commission, l'EESC et le JRC. Présence des commissaires Ribera et Roswall.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NETWORKS & ALLIANCES ============ -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Réseaux & alliances</span>
+      <h2>Un écosystème qui démultiplie l'impact</h2>
+      <p>Les réseaux structurés et les alliances thématiques permettent au CoR de porter la voix des régions et des villes bien au-delà de ses propres avis.</p>
+    </div>
+
+    <div class="network-grid">
+      <div class="net-card">
+        <div class="ico">★</div>
+        <h3>EU Local Councillors Network</h3>
+        <p>Initiative EU conjointement gérée avec la Commission, pierre angulaire de la démocratie participative.</p>
+        <div class="n">3 000+</div>
+        <p style="margin-top:-6px;font-size:13px;color:var(--ink-3)">Élus locaux et régionaux dans les 27 États membres</p>
+        <div class="net-stats">
+          <div class="net-stat"><strong>1 700</strong>Autorités engagées</div>
+          <div class="net-stat"><strong>350</strong>Visites à Bruxelles</div>
+          <div class="net-stat"><strong>12</strong>Webinaires thématiques</div>
+          <div class="net-stat"><strong>18,7 %</strong>Click-to-open rate</div>
+        </div>
+      </div>
+
+      <div class="net-card">
+        <div class="ico">◆</div>
+        <h3>Young Elected Politicians</h3>
+        <p>Programme phare pour impliquer les jeunes élus comme ambassadeurs du CoR et de l'UE.</p>
+        <div class="n">881</div>
+        <p style="margin-top:-6px;font-size:13px;color:var(--ink-3)">YEPs actifs — 150 nouveaux en 2025</p>
+        <div class="net-stats">
+          <div class="net-stat"><strong>1 141</strong>Enrôlés depuis 2019</div>
+          <div class="net-stat"><strong>90 %</strong>Taux de présence EURW</div>
+          <div class="net-stat"><strong>66 %</strong>Taux d'ouverture newsletter</div>
+          <div class="net-stat"><strong>104</strong>Participants EURegionsWeek</div>
+        </div>
+      </div>
+
+      <div class="net-card">
+        <div class="ico">⬢</div>
+        <h3>Alliances thématiques</h3>
+        <p>Trois alliances mobilisées en 2025, chacune avec un impact politique mesurable.</p>
+        <div class="n">3</div>
+        <p style="margin-top:-6px;font-size:13px;color:var(--ink-3)">Cohésion · Automobile · Reconstruction Ukraine</p>
+        <div class="net-stats">
+          <div class="net-stat"><strong>Cohesion Alliance</strong>Manifestation + lettre PE sur le MFF</div>
+          <div class="net-stat"><strong>ARA</strong>Déclaration de Munich (sept. 2025)</div>
+          <div class="net-stat"><strong>Alliance Ukraine</strong>TIPS4UA, Partnership Hub</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EU REGIONS WEEK FOCUS ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Évènement phare</span>
+      <h2>EU Regions Week 2025 — l'édition de tous les records</h2>
+      <p>23e édition. Un rendez-vous central pour défendre la politique de cohésion et donner de la voix aux régions et aux villes.</p>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi sml">
+        <div class="cat">Participation</div>
+        <div class="big-num">6 500</div>
+        <div class="label">Participants dont 3 200 sur site</div>
+        <div class="delta">+28 % vs 2024</div>
+      </div>
+      <div class="kpi sml">
+        <div class="cat">Reach</div>
+        <div class="big-num">80</div>
+        <div class="label">Pays représentés</div>
+      </div>
+      <div class="kpi sml">
+        <div class="cat">Programme</div>
+        <div class="big-num">143</div>
+        <div class="label">Sessions au programme</div>
+      </div>
+      <div class="kpi sml">
+        <div class="cat">Médias</div>
+        <div class="big-num">140</div>
+        <div class="label">Journalistes invités</div>
+      </div>
+      <div class="kpi big">
+        <div class="cat">Discours « State of Regions and Cities »</div>
+        <div class="big-num">57 000</div>
+        <div class="label">Vues Facebook sur le discours de la présidente, 55 300 vues vidéo totales, 30 000 clics vers le rapport, campagnes multilingues en 10 langues.</div>
+      </div>
+      <div class="kpi big">
+        <div class="cat">Impact social</div>
+        <div class="big-num">3,57 M</div>
+        <div class="label">Impressions via campagnes payantes. Hausse de l'engagement de +500 % en glissement annuel. 554 mentions, 1 783 interactions sur le discours.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UKRAINE ============ -->
+<section>
+  <div class="wrap">
+    <div class="ukraine">
+      <div class="ukraine-head">
+        <div class="flag" aria-hidden="true"></div>
+        <div>
+          <span class="section-tag">Solidarité</span>
+          <h2>Solidarité avec l'Ukraine</h2>
+        </div>
+      </div>
+      <p style="color:var(--ink-2);font-size:16px;max-width:800px">Grâce à l'Alliance européenne des villes et des régions pour la reconstruction de l'Ukraine, le CoR a inscrit l'approche décentralisée comme pilier de la stratégie de reconstruction, et renforcé le rôle des LRA dans le processus d'adhésion européenne de l'Ukraine.</p>
+
+      <div class="uk-grid">
+        <div class="uk-stat">
+          <div class="n">44</div>
+          <div class="l">Responsables ukrainiens formés via TIPS4UA (programme reconduit en 2026-2027)</div>
+        </div>
+        <div class="uk-stat">
+          <div class="n">400+</div>
+          <div class="l">Représentants LRA invités à l'Ukraine Recovery Conference 2025 (Rome)</div>
+        </div>
+        <div class="uk-stat">
+          <div class="n">16</div>
+          <div class="l">Partenariats inter-municipaux signés (1 au forum CoR + 15 en marge de l'URC)</div>
+        </div>
+        <div class="uk-stat">
+          <div class="n">3</div>
+          <div class="l">Pays d'accueil des Summer Camps pour enfants ukrainiens (SE, GR, MT)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOPICS GRID ============ -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Portfolio thématique</span>
+      <h2>Les domaines d'impact du CoR en 2025</h2>
+      <p>Un éventail d'avis et d'initiatives couvrant les grandes transitions de l'UE — cohésion, environnement, économie, démocratie, numérique.</p>
+    </div>
+
+    <div class="topics">
+      <div class="topic">
+        <div class="cat">Cohésion</div>
+        <h4>Politique de cohésion post-2027</h4>
+        <p>Partenariat, multilevel governance, défense d'une politique forte pour toutes les régions.</p>
+      </div>
+      <div class="topic">
+        <div class="cat">Cohésion</div>
+        <h4>Logement abordable</h4>
+        <p>Impact direct sur les conclusions EPSCO, la résolution PE et le comité HOUS.</p>
+      </div>
+      <div class="topic">
+        <div class="cat">Cohésion</div>
+        <h4>MFF 2028-2034</h4>
+        <p>19 renvois pour 2026, lettre inter-groupes au PE, mobilisation Cohesion Alliance.</p>
+      </div>
+      <div class="topic">
+        <div class="cat">Cohésion</div>
+        <h4>Recherche — FP10</h4>
+        <p>Enveloppe de 175,3 Mds €, Regional Innovation Valleys préservées post-2028.</p>
+      </div>
+      <div class="topic">
+        <div class="cat">Résilience</div>
+        <h4>Pacte européen pour l'océan</h4>
+        <p>11 propositions CoR intégrées, Ocean Act prévu 2026-2027.</p>
+      </div>
+      <div class="topic">
+        <div class="cat">Résilience</div>
+        <h4>Résilience hydrique</h4>
+        <p>Priorité stratégique du mandat, 1er Water Resilience Forum co-organisé.</p>
+      </div>
+      <div class="topic">
+        <div class="cat">Résilience</div>
+        <h4>Transition énergétique</h4>
+        <p>Action Plan for Affordable Energy, EU Agenda for Cities façonnée par les avis CoR.</p>
+      </div>
+      <div class="topic">
+        <div class="cat">Résilience</div>
+        <h4>Transport & automobile</h4>
+        <p>EMDS, Automotive Regions Alliance, Déclaration de Munich.</p>
+      </div>
+      <div class="topic">
+        <div class="cat">Résilience</div>
+        <h4>Climat global — COP30</h4>
+        <p>1er Pre-COP subnational européen, endossement EU de la Coalition CHAMP.</p>
+      </div>
+      <div class="topic">
+        <div class="cat">Résilience</div>
+        <h4>Intelligence artificielle</h4>
+        <p>Opinion présentée au Council TELECOM, Digital Participatory Forum co-organisé avec l'AI Office.</p>
+      </div>
+      <div class="topic">
+        <div class="cat">Proximité</div>
+        <h4>Rule of law</h4>
+        <p>Approche systémique du rôle des LRA, auditions PE, EESC, Commission.</p>
+      </div>
+      <div class="topic">
+        <div class="cat">Proximité</div>
+        <h4>Mayor Adamowicz Award</h4>
+        <p>Lauréat : Vitaliy Klitschko, maire de Kyiv ; couverture dans 15 pays.</p>
+      </div>
+      <div class="topic">
+        <div class="cat">Proximité</div>
+        <h4>Égalité & intergénérationnel</h4>
+        <p>Avis sur la Roadmap for Women's Rights et sur l'équité intergénérationnelle.</p>
+      </div>
+      <div class="topic">
+        <div class="cat">Proximité</div>
+        <h4>Zero long-term unemployment</h4>
+        <p>Projet pilote de la Commission avec financement ESF+ signé (sept. 2025).</p>
+      </div>
+      <div class="topic">
+        <div class="cat">Proximité</div>
+        <h4>Global Gateway</h4>
+        <p>Opinion sur la localisation reprise dans le rapport PE.</p>
+      </div>
+      <div class="topic">
+        <div class="cat">Proximité</div>
+        <h4>Diplomatie subnationale</h4>
+        <p>1re European Public Diplomacy Week, Pact pour la Méditerranée (ARLEM).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUTLOOK ============ -->
+<section>
+  <div class="wrap">
+    <div class="outlook">
+      <span class="section-tag">Perspectives 2026</span>
+      <h2>Regarder vers l'avant</h2>
+      <p class="lede">Le mandat 2025-2030 entre dans sa phase opérationnelle. Trois chantiers déjà engagés vont structurer l'impact du CoR dans les prochains mois.</p>
+
+      <div class="outlook-grid">
+        <div class="out-card">
+          <div class="n">19</div>
+          <h4>Renvois MFF</h4>
+          <p>Les 19 avis liés au MFF seront adoptés en 2026 ; opportunité unique d'influencer le prochain cadre financier pluriannuel.</p>
+        </div>
+        <div class="out-card">
+          <div class="n">ECA</div>
+          <h4>Audit de la Cour des comptes</h4>
+          <p>L'audit de performance mené en 2025 nourrira les recommandations de la Cour des comptes et un plan de suivi pluriannuel.</p>
+        </div>
+        <div class="out-card">
+          <div class="n">2026</div>
+          <h4>Culture d'impact ancrée</h4>
+          <p>La fonction de coordinateur du rapport d'impact et le pilotage par KPIs intègrent définitivement l'ADN institutionnel du CoR.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand">European Committee of the Regions</div>
+      <div class="meta">Annual Impact Report 2025 — Référence : COR-2025-03675-10-00-NB-EDI</div>
+    </div>
+    <div class="meta">
+      Infographie synthétique · Octobre 2026<br>
+      Source : <a href="https://cor.europa.eu" target="_blank" rel="noopener">cor.europa.eu</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
